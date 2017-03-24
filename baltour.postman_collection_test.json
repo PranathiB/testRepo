@@ -1,0 +1,1047 @@
+{
+	"variables": [],
+	"info": {
+		"name": "baltour",
+		"_postman_id": "3ba5d3b1-347d-d275-6bdc-b3ac5bbfa1f8",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1. Metodo “app_citta_partenza”",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200",
+							"var contentTypeHeaderExists = responseHeaders.hasOwnProperty(\"Content-Type\");",
+							" ",
+							"tests[\"Has Content-Type\"] = contentTypeHeaderExists;",
+							" ",
+							"if (contentTypeHeaderExists) {",
+							"    tests[\"Content-Type is application/json\"] = ",
+							"      responseHeaders[\"Content-Type\"].has(\"application/json\");",
+							"      ",
+							"}",
+							"",
+							"tests[\"Response has citta\"] = responseBody.has(\"citta\");",
+							"tests[\"Citta has id \"] = responseBody.has(\"id\")",
+							"tests[\"Citta has descrizione \"] = responseBody.has(\"descrizione\")",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://62.149.204.71/REST/data/corse/app_citta_partenza/9038d809b9aa39aa1354c1dd1e520298/20-05-2017",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "d74704a4-d5a8-4e09-8d65-b18f54ad59d9",
+					"name": "app_citta_partenza_response_ok",
+					"originalRequest": {
+						"url": "https://62.149.204.71/REST/data/corse/app_citta_partenza/9038d809b9aa39aa1354c1dd1e520298/20-05-2017",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, must-revalidate",
+							"name": "Cache-Control",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip",
+							"name": "Content-Encoding",
+							"description": "The type of encoding used on the data."
+						},
+						{
+							"key": "Content-Length",
+							"value": "3171",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 17 Mar 2017 12:11:07 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Expires",
+							"value": "0",
+							"name": "Expires",
+							"description": "Gives the date/time after which the response is considered stale"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=2, max=100",
+							"name": "Keep-Alive",
+							"description": "Custom header"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.2.22 (Ubuntu)",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding",
+							"name": "Vary",
+							"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Luracast Restler v2.1.0",
+							"name": "X-Powered-By",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 1508,
+					"body": "{\n  \"citta\": [\n    {\n      \"id\": \"1493\",\n      \"descrizione\": \"AGRIGENTO\"\n    },\n    {\n      \"id\": \"876\",\n      \"descrizione\": \"AIX-EN-PROVENCE\"\n    },\n    {\n      \"id\": \"1201\",\n      \"descrizione\": \"ALBA ADRIATICA\"\n    },\n    {\n      \"id\": \"1355\",\n      \"descrizione\": \"ALCALA DE CHIVERT\"\n    },\n    {\n      \"id\": \"73\",\n      \"descrizione\": \"ALESSANDRIA\"\n    },\n    {\n      \"id\": \"94\",\n      \"descrizione\": \"ALICANTE\"\n    },\n    {\n      \"id\": \"796\",\n      \"descrizione\": \"AMSTERDAM\"\n    },\n    {\n      \"id\": \"835\",\n      \"descrizione\": \"ANCONA\"\n    },\n    {\n      \"id\": \"1154\",\n      \"descrizione\": \"ANGERS\"\n    },\n    {\n      \"id\": \"779\",\n      \"descrizione\": \"ANTWERPEN\"\n    },\n    {\n      \"id\": \"1280\",\n      \"descrizione\": \"AOSTA\"\n    },\n    {\n      \"id\": \"1566\",\n      \"descrizione\": \"AREZZO\"\n    },\n    {\n      \"id\": \"1476\",\n      \"descrizione\": \"ASCOLI PICENO\"\n    },\n    {\n      \"id\": \"1736\",\n      \"descrizione\": \"AUGUSTA\"\n    },\n    {\n      \"id\": \"1195\",\n      \"descrizione\": \"AVEZZANO\"\n    },\n    {\n      \"id\": \"865\",\n      \"descrizione\": \"AVIGNON\"\n    },\n    {\n      \"id\": \"1442\",\n      \"descrizione\": \"BARBERINO DI MUGELLO\"\n    },\n    {\n      \"id\": \"87\",\n      \"descrizione\": \"BARCELONA NORTE\"\n    },\n    {\n      \"id\": \"88\",\n      \"descrizione\": \"BARCELONA SANTS\"\n    },\n    {\n      \"id\": \"1039\",\n      \"descrizione\": \"BARI\"\n    },\n    {\n      \"id\": \"1254\",\n      \"descrizione\": \"BARLETTA\"\n    },\n    {\n      \"id\": \"1213\",\n      \"descrizione\": \"BATTIPAGLIA\"\n    },\n    {\n      \"id\": \"1194\",\n      \"descrizione\": \"BELLINZONA\"\n    },\n    {\n      \"id\": \"93\",\n      \"descrizione\": \"BENIDORM\"\n    },\n    {\n      \"id\": \"72\",\n      \"descrizione\": \"BERGAMO\"\n    },\n    {\n      \"id\": \"909\",\n      \"descrizione\": \"BERLIN\"\n    },\n    {\n      \"id\": \"1441\",\n      \"descrizione\": \"BETTOLLE\"\n    },\n    {\n      \"id\": \"1358\",\n      \"descrizione\": \"BEZIERS\"\n    },\n    {\n      \"id\": \"1042\",\n      \"descrizione\": \"BIALYSTOK\"\n    },\n    {\n      \"id\": \"837\",\n      \"descrizione\": \"BIBIONE\"\n    },\n    {\n      \"id\": \"873\",\n      \"descrizione\": \"BIELSKO BIALA\"\n    },\n    {\n      \"id\": \"1259\",\n      \"descrizione\": \"BOCHNIA\"\n    },\n    {\n      \"id\": \"31\",\n      \"descrizione\": \"BOLOGNA\"\n    },\n    {\n      \"id\": \"18\",\n      \"descrizione\": \"BOLZANO\"\n    },\n    {\n      \"id\": \"880\",\n      \"descrizione\": \"BORDEAUX\"\n    },\n    {\n      \"id\": \"768\",\n      \"descrizione\": \"BRATISLAVA\"\n    },\n    {\n      \"id\": \"793\",\n      \"descrizione\": \"BREDA\"\n    },\n    {\n      \"id\": \"1710\",\n      \"descrizione\": \"BREGENZ\"\n    },\n    {\n      \"id\": \"15\",\n      \"descrizione\": \"BRESCIA\"\n    },\n    {\n      \"id\": \"1037\",\n      \"descrizione\": \"BRINDISI\"\n    },\n    {\n      \"id\": \"776\",\n      \"descrizione\": \"BRUSSEL\"\n    },\n    {\n      \"id\": \"831\",\n      \"descrizione\": \"BRZESKO\"\n    },\n    {\n      \"id\": \"775\",\n      \"descrizione\": \"BUDAPEST\"\n    },\n    {\n      \"id\": \"69\",\n      \"descrizione\": \"BYDGOSZCZ\"\n    },\n    {\n      \"id\": \"1475\",\n      \"descrizione\": \"CACCAMO\"\n    },\n    {\n      \"id\": \"1452\",\n      \"descrizione\": \"CAEN\"\n    },\n    {\n      \"id\": \"1634\",\n      \"descrizione\": \"CAIANELLO\"\n    },\n    {\n      \"id\": \"1495\",\n      \"descrizione\": \"CALTANISSETTA\"\n    },\n    {\n      \"id\": \"1494\",\n      \"descrizione\": \"CANICATTI\"\n    },\n    {\n      \"id\": \"1632\",\n      \"descrizione\": \"CANNES\"\n    },\n    {\n      \"id\": \"1279\",\n      \"descrizione\": \"CAORLE\"\n    },\n    {\n      \"id\": \"1719\",\n      \"descrizione\": \"CARCASSONNE\"\n    },\n    {\n      \"id\": \"1471\",\n      \"descrizione\": \"CASENOVE\"\n    },\n    {\n      \"id\": \"1214\",\n      \"descrizione\": \"CASERTA\"\n    },\n    {\n      \"id\": \"1228\",\n      \"descrizione\": \"CASSINO\"\n    },\n    {\n      \"id\": \"1737\",\n      \"descrizione\": \"CASTELLANETA\"\n    },\n    {\n      \"id\": \"91\",\n      \"descrizione\": \"CASTELLON\"\n    },\n    {\n      \"id\": \"1502\",\n      \"descrizione\": \"CATANIA\"\n    },\n    {\n      \"id\": \"959\",\n      \"descrizione\": \"CATTOLICA\"\n    },\n    {\n      \"id\": \"1040\",\n      \"descrizione\": \"CERIGNOLA\"\n    },\n    {\n      \"id\": \"1208\",\n      \"descrizione\": \"CESENA\"\n    },\n    {\n      \"id\": \"1286\",\n      \"descrizione\": \"CHAMONIX-MONT-BLANC\"\n    },\n    {\n      \"id\": \"1483\",\n      \"descrizione\": \"CHIETI\"\n    },\n    {\n      \"id\": \"1203\",\n      \"descrizione\": \"CIVITANOVA MARCHE\"\n    },\n    {\n      \"id\": \"1472\",\n      \"descrizione\": \"COLFIORITO\"\n    },\n    {\n      \"id\": \"1438\",\n      \"descrizione\": \"COLLE DI VAL D'ELSA\"\n    },\n    {\n      \"id\": \"1499\",\n      \"descrizione\": \"COMISO\"\n    },\n    {\n      \"id\": \"79\",\n      \"descrizione\": \"COSENZA\"\n    },\n    {\n      \"id\": \"1700\",\n      \"descrizione\": \"COURMAYER\"\n    },\n    {\n      \"id\": \"1728\",\n      \"descrizione\": \"CRIKVENICA\"\n    },\n    {\n      \"id\": \"1550\",\n      \"descrizione\": \"CUPRA MARITTIMA\"\n    },\n    {\n      \"id\": \"1024\",\n      \"descrizione\": \"CZAPLINEK\"\n    },\n    {\n      \"id\": \"34\",\n      \"descrizione\": \"CZESTOCHOWA\"\n    },\n    {\n      \"id\": \"1724\",\n      \"descrizione\": \"DAKOVO\"\n    },\n    {\n      \"id\": \"841\",\n      \"descrizione\": \"DEBICA\"\n    },\n    {\n      \"id\": \"795\",\n      \"descrizione\": \"DEN HAAG\"\n    },\n    {\n      \"id\": \"957\",\n      \"descrizione\": \"DIJON\"\n    },\n    {\n      \"id\": \"766\",\n      \"descrizione\": \"DOVER\"\n    },\n    {\n      \"id\": \"1445\",\n      \"descrizione\": \"EBOLI\"\n    },\n    {\n      \"id\": \"1464\",\n      \"descrizione\": \"EMPOLI\"\n    },\n    {\n      \"id\": \"1496\",\n      \"descrizione\": \"ENNA\"\n    },\n    {\n      \"id\": \"1206\",\n      \"descrizione\": \"FANO\"\n    },\n    {\n      \"id\": \"932\",\n      \"descrizione\": \"FERRARA\"\n    },\n    {\n      \"id\": \"84\",\n      \"descrizione\": \"FIGUERAS\"\n    },\n    {\n      \"id\": \"30\",\n      \"descrizione\": \"FIRENZE\"\n    },\n    {\n      \"id\": \"1041\",\n      \"descrizione\": \"FOGGIA\"\n    },\n    {\n      \"id\": \"1209\",\n      \"descrizione\": \"FORLI\"\n    },\n    {\n      \"id\": \"1261\",\n      \"descrizione\": \"FRANCAVILLA FONTANA\"\n    },\n    {\n      \"id\": \"901\",\n      \"descrizione\": \"FRANKFURT\"\n    },\n    {\n      \"id\": \"1031\",\n      \"descrizione\": \"FROSINONE\"\n    },\n    {\n      \"id\": \"1738\",\n      \"descrizione\": \"GALLIPOLI\"\n    },\n    {\n      \"id\": \"1282\",\n      \"descrizione\": \"GENEVE\"\n    },\n    {\n      \"id\": \"71\",\n      \"descrizione\": \"GENOVA\"\n    },\n    {\n      \"id\": \"1520\",\n      \"descrizione\": \"GIOIA DEL COLLE\"\n    },\n    {\n      \"id\": \"1599\",\n      \"descrizione\": \"GIOIA TAURO\"\n    },\n    {\n      \"id\": \"85\",\n      \"descrizione\": \"GIRONA\"\n    },\n    {\n      \"id\": \"1199\",\n      \"descrizione\": \"GIULIANOVA\"\n    },\n    {\n      \"id\": \"1625\",\n      \"descrizione\": \"GLIWICE\"\n    },\n    {\n      \"id\": \"1230\",\n      \"descrizione\": \"GNIEZNO\"\n    },\n    {\n      \"id\": \"842\",\n      \"descrizione\": \"GORLICE\"\n    },\n    {\n      \"id\": \"1732\",\n      \"descrizione\": \"GOSPIC\"\n    },\n    {\n      \"id\": \"26\",\n      \"descrizione\": \"GRAZ\"\n    },\n    {\n      \"id\": \"1188\",\n      \"descrizione\": \"GRENOBLE\"\n    },\n    {\n      \"id\": \"1458\",\n      \"descrizione\": \"GROSSETO\"\n    },\n    {\n      \"id\": \"1490\",\n      \"descrizione\": \"GROTTAMMARE\"\n    },\n    {\n      \"id\": \"1393\",\n      \"descrizione\": \"HAMBURG\"\n    },\n    {\n      \"id\": \"1725\",\n      \"descrizione\": \"HUMENNE\"\n    },\n    {\n      \"id\": \"1511\",\n      \"descrizione\": \"HYTHE\"\n    },\n    {\n      \"id\": \"1706\",\n      \"descrizione\": \"INGOLSTADT\"\n    },\n    {\n      \"id\": \"829\",\n      \"descrizione\": \"JAROSLAW\"\n    },\n    {\n      \"id\": \"852\",\n      \"descrizione\": \"JASLO\"\n    },\n    {\n      \"id\": \"52\",\n      \"descrizione\": \"JEDRZEJOW\"\n    },\n    {\n      \"id\": \"899\",\n      \"descrizione\": \"KARLSRUHE\"\n    },\n    {\n      \"id\": \"33\",\n      \"descrizione\": \"KATOWICE\"\n    },\n    {\n      \"id\": \"1263\",\n      \"descrizione\": \"KEPNO\"\n    },\n    {\n      \"id\": \"54\",\n      \"descrizione\": \"KIELCE\"\n    },\n    {\n      \"id\": \"25\",\n      \"descrizione\": \"KLAGENFURT\"\n    },\n    {\n      \"id\": \"798\",\n      \"descrizione\": \"KLODZKO\"\n    },\n    {\n      \"id\": \"804\",\n      \"descrizione\": \"KONIN\"\n    },\n    {\n      \"id\": \"763\",\n      \"descrizione\": \"KOSICE\"\n    },\n    {\n      \"id\": \"826\",\n      \"descrizione\": \"KRAKOW\"\n    },\n    {\n      \"id\": \"853\",\n      \"descrizione\": \"KROSNO\"\n    },\n    {\n      \"id\": \"1084\",\n      \"descrizione\": \"LAMEZIA TERME\"\n    },\n    {\n      \"id\": \"1518\",\n      \"descrizione\": \"LANCIANO\"\n    },\n    {\n      \"id\": \"924\",\n      \"descrizione\": \"L'AQUILA\"\n    },\n    {\n      \"id\": \"823\",\n      \"descrizione\": \"LA SPEZIA\"\n    },\n    {\n      \"id\": \"1629\",\n      \"descrizione\": \"LE CANNET\"\n    },\n    {\n      \"id\": \"1253\",\n      \"descrizione\": \"LECCE\"\n    },\n    {\n      \"id\": \"1556\",\n      \"descrizione\": \"LEIPZIG\"\n    },\n    {\n      \"id\": \"1500\",\n      \"descrizione\": \"LENTINI\"\n    },\n    {\n      \"id\": \"46\",\n      \"descrizione\": \"LESZNO\"\n    },\n    {\n      \"id\": \"836\",\n      \"descrizione\": \"LIDO DI JESOLO\"\n    },\n    {\n      \"id\": \"767\",\n      \"descrizione\": \"LIEGE\"\n    },\n    {\n      \"id\": \"838\",\n      \"descrizione\": \"LIGNANO\"\n    },\n    {\n      \"id\": \"1000\",\n      \"descrizione\": \"LILLE\"\n    },\n    {\n      \"id\": \"974\",\n      \"descrizione\": \"LIMANOWA\"\n    },\n    {\n      \"id\": \"1711\",\n      \"descrizione\": \"LINDAU\"\n    },\n    {\n      \"id\": \"821\",\n      \"descrizione\": \"LIVORNO\"\n    },\n    {\n      \"id\": \"1448\",\n      \"descrizione\": \"LJUBLJANA\"\n    },\n    {\n      \"id\": \"86\",\n      \"descrizione\": \"LLORET DE MAR\"\n    },\n    {\n      \"id\": \"35\",\n      \"descrizione\": \"LODZ\"\n    },\n    {\n      \"id\": \"774\",\n      \"descrizione\": \"LONDON\"\n    },\n    {\n      \"id\": \"1690\",\n      \"descrizione\": \"LOWICZ\"\n    },\n    {\n      \"id\": \"58\",\n      \"descrizione\": \"LUBLIN\"\n    },\n    {\n      \"id\": \"1691\",\n      \"descrizione\": \"LUBLINIEC\"\n    },\n    {\n      \"id\": \"949\",\n      \"descrizione\": \"LUCCA\"\n    },\n    {\n      \"id\": \"1193\",\n      \"descrizione\": \"LUGANO\"\n    },\n    {\n      \"id\": \"998\",\n      \"descrizione\": \"LUXEMBOURG\"\n    },\n    {\n      \"id\": \"1628\",\n      \"descrizione\": \"LUZERN\"\n    },\n    {\n      \"id\": \"765\",\n      \"descrizione\": \"LYON\"\n    },\n    {\n      \"id\": \"1488\",\n      \"descrizione\": \"MACERATA\"\n    },\n    {\n      \"id\": \"855\",\n      \"descrizione\": \"MADRID\"\n    },\n    {\n      \"id\": \"1602\",\n      \"descrizione\": \"MANGONE\"\n    },\n    {\n      \"id\": \"1334\",\n      \"descrizione\": \"MANNHEIM\"\n    },\n    {\n      \"id\": \"1569\",\n      \"descrizione\": \"MANTOVA\"\n    },\n    {\n      \"id\": \"875\",\n      \"descrizione\": \"MARSEILLE\"\n    },\n    {\n      \"id\": \"1202\",\n      \"descrizione\": \"MARTINSICURO\"\n    },\n    {\n      \"id\": \"1712\",\n      \"descrizione\": \"MEMMINGEN\"\n    },\n    {\n      \"id\": \"1504\",\n      \"descrizione\": \"MESSINA\"\n    },\n    {\n      \"id\": \"892\",\n      \"descrizione\": \"METZ\"\n    },\n    {\n      \"id\": \"1726\",\n      \"descrizione\": \"MICHALOVCE\"\n    },\n    {\n      \"id\": \"14\",\n      \"descrizione\": \"MILANO\"\n    },\n    {\n      \"id\": \"948\",\n      \"descrizione\": \"MODENA\"\n    },\n    {\n      \"id\": \"1497\",\n      \"descrizione\": \"MODICA\"\n    },\n    {\n      \"id\": \"1466\",\n      \"descrizione\": \"MONOPOLI\"\n    },\n    {\n      \"id\": \"895\",\n      \"descrizione\": \"MONTECATINI TERME\"\n    },\n    {\n      \"id\": \"1439\",\n      \"descrizione\": \"MONTERIGGIONI\"\n    },\n    {\n      \"id\": \"1482\",\n      \"descrizione\": \"MONTESILVANO\"\n    },\n    {\n      \"id\": \"866\",\n      \"descrizione\": \"MONTPELLIER\"\n    },\n    {\n      \"id\": \"1521\",\n      \"descrizione\": \"MOTTOLA\"\n    },\n    {\n      \"id\": \"1474\",\n      \"descrizione\": \"MUCCIA\"\n    },\n    {\n      \"id\": \"1190\",\n      \"descrizione\": \"MUNCHEN\"\n    },\n    {\n      \"id\": \"95\",\n      \"descrizione\": \"MURCIA\"\n    },\n    {\n      \"id\": \"1227\",\n      \"descrizione\": \"NAGYKANIZSA\"\n    },\n    {\n      \"id\": \"1357\",\n      \"descrizione\": \"NANCY\"\n    },\n    {\n      \"id\": \"1055\",\n      \"descrizione\": \"NANTES\"\n    },\n    {\n      \"id\": \"28\",\n      \"descrizione\": \"NAPOLI\"\n    },\n    {\n      \"id\": \"1278\",\n      \"descrizione\": \"NARBONNE\"\n    },\n    {\n      \"id\": \"864\",\n      \"descrizione\": \"NICE\"\n    },\n    {\n      \"id\": \"877\",\n      \"descrizione\": \"NIMES\"\n    },\n    {\n      \"id\": \"1166\",\n      \"descrizione\": \"NITRA\"\n    },\n    {\n      \"id\": \"1720\",\n      \"descrizione\": \"NOVA GRADISKA\"\n    },\n    {\n      \"id\": \"919\",\n      \"descrizione\": \"NOVARA\"\n    },\n    {\n      \"id\": \"1729\",\n      \"descrizione\": \"NOVI VINODOLSKI\"\n    },\n    {\n      \"id\": \"839\",\n      \"descrizione\": \"NOWY SACZ\"\n    },\n    {\n      \"id\": \"1349\",\n      \"descrizione\": \"NURNBERG\"\n    },\n    {\n      \"id\": \"961\",\n      \"descrizione\": \"ORTE\"\n    },\n    {\n      \"id\": \"1715\",\n      \"descrizione\": \"ORTHEZ\"\n    },\n    {\n      \"id\": \"1623\",\n      \"descrizione\": \"ORTONA\"\n    },\n    {\n      \"id\": \"1696\",\n      \"descrizione\": \"OSIJEK\"\n    },\n    {\n      \"id\": \"984\",\n      \"descrizione\": \"OSTROW MAZOWIECKA\"\n    },\n    {\n      \"id\": \"1731\",\n      \"descrizione\": \"OTOCAC\"\n    },\n    {\n      \"id\": \"32\",\n      \"descrizione\": \"PADOVA\"\n    },\n    {\n      \"id\": \"1492\",\n      \"descrizione\": \"PALERMO\"\n    },\n    {\n      \"id\": \"1598\",\n      \"descrizione\": \"PALMI\"\n    },\n    {\n      \"id\": \"777\",\n      \"descrizione\": \"PARIS\"\n    },\n    {\n      \"id\": \"820\",\n      \"descrizione\": \"PARMA\"\n    },\n    {\n      \"id\": \"1716\",\n      \"descrizione\": \"PAU\"\n    },\n    {\n      \"id\": \"1489\",\n      \"descrizione\": \"PEDASO\"\n    },\n    {\n      \"id\": \"867\",\n      \"descrizione\": \"PERPIGNAN\"\n    },\n    {\n      \"id\": \"894\",\n      \"descrizione\": \"PERUGIA\"\n    },\n    {\n      \"id\": \"926\",\n      \"descrizione\": \"PESARO\"\n    },\n    {\n      \"id\": \"1050\",\n      \"descrizione\": \"PESCARA\"\n    },\n    {\n      \"id\": \"824\",\n      \"descrizione\": \"PIACENZA\"\n    },\n    {\n      \"id\": \"1145\",\n      \"descrizione\": \"PIEST ANY\"\n    },\n    {\n      \"id\": \"61\",\n      \"descrizione\": \"PILA\"\n    },\n    {\n      \"id\": \"1402\",\n      \"descrizione\": \"PILSEN\"\n    },\n    {\n      \"id\": \"840\",\n      \"descrizione\": \"PILZNO\"\n    },\n    {\n      \"id\": \"1480\",\n      \"descrizione\": \"PINETO\"\n    },\n    {\n      \"id\": \"822\",\n      \"descrizione\": \"PISA\"\n    },\n    {\n      \"id\": \"1447\",\n      \"descrizione\": \"PISTOIA\"\n    },\n    {\n      \"id\": \"1437\",\n      \"descrizione\": \"POGGIBONSI\"\n    },\n    {\n      \"id\": \"1088\",\n      \"descrizione\": \"POLICORO\"\n    },\n    {\n      \"id\": \"1444\",\n      \"descrizione\": \"POLLA\"\n    },\n    {\n      \"id\": \"1216\",\n      \"descrizione\": \"POMPEI\"\n    },\n    {\n      \"id\": \"1508\",\n      \"descrizione\": \"POPOLI\"\n    },\n    {\n      \"id\": \"772\",\n      \"descrizione\": \"POPRAD\"\n    },\n    {\n      \"id\": \"1477\",\n      \"descrizione\": \"PORTO D'ASCOLI\"\n    },\n    {\n      \"id\": \"1572\",\n      \"descrizione\": \"PORTO RECANATI\"\n    },\n    {\n      \"id\": \"1205\",\n      \"descrizione\": \"PORTO SAN GIORGIO\"\n    },\n    {\n      \"id\": \"1309\",\n      \"descrizione\": \"POSTOJNA\"\n    },\n    {\n      \"id\": \"45\",\n      \"descrizione\": \"POZNAN\"\n    },\n    {\n      \"id\": \"754\",\n      \"descrizione\": \"PRAHA\"\n    },\n    {\n      \"id\": \"1446\",\n      \"descrizione\": \"PRATO\"\n    },\n    {\n      \"id\": \"1507\",\n      \"descrizione\": \"PRATOLA PELIGNA\"\n    },\n    {\n      \"id\": \"773\",\n      \"descrizione\": \"PRESOV\"\n    },\n    {\n      \"id\": \"830\",\n      \"descrizione\": \"PRZEMYSL\"\n    },\n    {\n      \"id\": \"960\",\n      \"descrizione\": \"PRZEWORSK\"\n    },\n    {\n      \"id\": \"1630\",\n      \"descrizione\": \"PUGET SUR ARGENS\"\n    },\n    {\n      \"id\": \"57\",\n      \"descrizione\": \"PULAWY\"\n    },\n    {\n      \"id\": \"56\",\n      \"descrizione\": \"RADOM\"\n    },\n    {\n      \"id\": \"1656\",\n      \"descrizione\": \"RADOMSKO\"\n    },\n    {\n      \"id\": \"1498\",\n      \"descrizione\": \"RAGUSA\"\n    },\n    {\n      \"id\": \"871\",\n      \"descrizione\": \"RAVENNA\"\n    },\n    {\n      \"id\": \"1626\",\n      \"descrizione\": \"REGENSBURG\"\n    },\n    {\n      \"id\": \"1596\",\n      \"descrizione\": \"REGGIO CALABRIA\"\n    },\n    {\n      \"id\": \"1030\",\n      \"descrizione\": \"REGGIO EMILIA\"\n    },\n    {\n      \"id\": \"1603\",\n      \"descrizione\": \"RENDE\"\n    },\n    {\n      \"id\": \"1067\",\n      \"descrizione\": \"RENNES\"\n    },\n    {\n      \"id\": \"870\",\n      \"descrizione\": \"RICCIONE\"\n    },\n    {\n      \"id\": \"1329\",\n      \"descrizione\": \"RIJEKA\"\n    },\n    {\n      \"id\": \"825\",\n      \"descrizione\": \"RIMINI\"\n    },\n    {\n      \"id\": \"29\",\n      \"descrizione\": \"ROMA\"\n    },\n    {\n      \"id\": \"1666\",\n      \"descrizione\": \"ROPCZYCE\"\n    },\n    {\n      \"id\": \"1600\",\n      \"descrizione\": \"ROSARNO\"\n    },\n    {\n      \"id\": \"1479\",\n      \"descrizione\": \"ROSETO DEGLI ABRUZZI\"\n    },\n    {\n      \"id\": \"794\",\n      \"descrizione\": \"ROTTERDAM\"\n    },\n    {\n      \"id\": \"1453\",\n      \"descrizione\": \"ROUEN\"\n    },\n    {\n      \"id\": \"1250\",\n      \"descrizione\": \"RYBNIK\"\n    },\n    {\n      \"id\": \"828\",\n      \"descrizione\": \"RZESZOW\"\n    },\n    {\n      \"id\": \"1627\",\n      \"descrizione\": \"SAINT GALLEN\"\n    },\n    {\n      \"id\": \"1718\",\n      \"descrizione\": \"SAINT GAUDENS\"\n    },\n    {\n      \"id\": \"1443\",\n      \"descrizione\": \"SALA CONSILINA\"\n    },\n    {\n      \"id\": \"1049\",\n      \"descrizione\": \"SALERNO\"\n    },\n    {\n      \"id\": \"90\",\n      \"descrizione\": \"SALOU MARITIMO\"\n    },\n    {\n      \"id\": \"1051\",\n      \"descrizione\": \"SAN BENEDETTO DEL TRONTO\"\n    },\n    {\n      \"id\": \"1196\",\n      \"descrizione\": \"SAN GABRIELE\"\n    },\n    {\n      \"id\": \"869\",\n      \"descrizione\": \"SANOK\"\n    },\n    {\n      \"id\": \"1101\",\n      \"descrizione\": \"SAN REMO\"\n    },\n    {\n      \"id\": \"1570\",\n      \"descrizione\": \"SARZANA\"\n    },\n    {\n      \"id\": \"82\",\n      \"descrizione\": \"SAVONA\"\n    },\n    {\n      \"id\": \"1730\",\n      \"descrizione\": \"SENJ\"\n    },\n    {\n      \"id\": \"1473\",\n      \"descrizione\": \"SERRAVALLE\"\n    },\n    {\n      \"id\": \"1087\",\n      \"descrizione\": \"SIBARI\"\n    },\n    {\n      \"id\": \"1331\",\n      \"descrizione\": \"SIBENIK\"\n    },\n    {\n      \"id\": \"1523\",\n      \"descrizione\": \"SICIGNANO\"\n    },\n    {\n      \"id\": \"893\",\n      \"descrizione\": \"SIENA\"\n    },\n    {\n      \"id\": \"1459\",\n      \"descrizione\": \"SIERADZ\"\n    },\n    {\n      \"id\": \"1481\",\n      \"descrizione\": \"SILVI MARINA\"\n    },\n    {\n      \"id\": \"1404\",\n      \"descrizione\": \"SIOFOK\"\n    },\n    {\n      \"id\": \"1501\",\n      \"descrizione\": \"SIRACUSA\"\n    },\n    {\n      \"id\": \"833\",\n      \"descrizione\": \"SKARZYSKO\"\n    },\n    {\n      \"id\": \"1695\",\n      \"descrizione\": \"SLAVONSKI BROD\"\n    },\n    {\n      \"id\": \"1469\",\n      \"descrizione\": \"S.MARIA DEGLI ANGELI\"\n    },\n    {\n      \"id\": \"1689\",\n      \"descrizione\": \"SOCHACZEW\"\n    },\n    {\n      \"id\": \"1564\",\n      \"descrizione\": \"SORA\"\n    },\n    {\n      \"id\": \"1085\",\n      \"descrizione\": \"SPEZZANO ALBANESE\"\n    },\n    {\n      \"id\": \"1332\",\n      \"descrizione\": \"SPLIT\"\n    },\n    {\n      \"id\": \"994\",\n      \"descrizione\": \"STARGARD SZCZECINSKI\"\n    },\n    {\n      \"id\": \"891\",\n      \"descrizione\": \"STRASBOURG\"\n    },\n    {\n      \"id\": \"898\",\n      \"descrizione\": \"STUTTGART\"\n    },\n    {\n      \"id\": \"1350\",\n      \"descrizione\": \"SULMONA\"\n    },\n    {\n      \"id\": \"65\",\n      \"descrizione\": \"SZCZECIN\"\n    },\n    {\n      \"id\": \"996\",\n      \"descrizione\": \"SZCZECINEK\"\n    },\n    {\n      \"id\": \"1048\",\n      \"descrizione\": \"TARANTO\"\n    },\n    {\n      \"id\": \"1717\",\n      \"descrizione\": \"TARBES\"\n    },\n    {\n      \"id\": \"827\",\n      \"descrizione\": \"TARNOW\"\n    },\n    {\n      \"id\": \"89\",\n      \"descrizione\": \"TARRAGONA\"\n    },\n    {\n      \"id\": \"925\",\n      \"descrizione\": \"TERAMO\"\n    },\n    {\n      \"id\": \"1255\",\n      \"descrizione\": \"TERMOLI\"\n    },\n    {\n      \"id\": \"81\",\n      \"descrizione\": \"TORINO\"\n    },\n    {\n      \"id\": \"807\",\n      \"descrizione\": \"TORUN\"\n    },\n    {\n      \"id\": \"874\",\n      \"descrizione\": \"TOULON\"\n    },\n    {\n      \"id\": \"878\",\n      \"descrizione\": \"TOULOUSE\"\n    },\n    {\n      \"id\": \"1069\",\n      \"descrizione\": \"TOURS\"\n    },\n    {\n      \"id\": \"769\",\n      \"descrizione\": \"TRENCIN\"\n    },\n    {\n      \"id\": \"16\",\n      \"descrizione\": \"TRENTO\"\n    },\n    {\n      \"id\": \"945\",\n      \"descrizione\": \"TRIESTE\"\n    },\n    {\n      \"id\": \"1144\",\n      \"descrizione\": \"TRNAVA\"\n    },\n    {\n      \"id\": \"1733\",\n      \"descrizione\": \"TROGIR\"\n    },\n    {\n      \"id\": \"958\",\n      \"descrizione\": \"UDINE\"\n    },\n    {\n      \"id\": \"997\",\n      \"descrizione\": \"ULM\"\n    },\n    {\n      \"id\": \"1505\",\n      \"descrizione\": \"URBINO\"\n    },\n    {\n      \"id\": \"936\",\n      \"descrizione\": \"UTRECHT\"\n    },\n    {\n      \"id\": \"92\",\n      \"descrizione\": \"VALENCIA\"\n    },\n    {\n      \"id\": \"1693\",\n      \"descrizione\": \"VALLE DEL SALTO\"\n    },\n    {\n      \"id\": \"1197\",\n      \"descrizione\": \"VAL VOMANO\"\n    },\n    {\n      \"id\": \"1519\",\n      \"descrizione\": \"VASTO\"\n    },\n    {\n      \"id\": \"80\",\n      \"descrizione\": \"VENEZIA\"\n    },\n    {\n      \"id\": \"24\",\n      \"descrizione\": \"VENEZIA\\/MESTRE\"\n    },\n    {\n      \"id\": \"83\",\n      \"descrizione\": \"VENTIMIGLIA\"\n    },\n    {\n      \"id\": \"17\",\n      \"descrizione\": \"VERONA\"\n    },\n    {\n      \"id\": \"811\",\n      \"descrizione\": \"VIAREGGIO\"\n    },\n    {\n      \"id\": \"1601\",\n      \"descrizione\": \"VIBO VALENTIA\"\n    },\n    {\n      \"id\": \"955\",\n      \"descrizione\": \"VICENZA\"\n    },\n    {\n      \"id\": \"1597\",\n      \"descrizione\": \"VILLA SAN GIOVANNI\"\n    },\n    {\n      \"id\": \"1722\",\n      \"descrizione\": \"VINKOVCI\"\n    },\n    {\n      \"id\": \"1723\",\n      \"descrizione\": \"VUKOVAR\"\n    },\n    {\n      \"id\": \"819\",\n      \"descrizione\": \"WARSZAWA\"\n    },\n    {\n      \"id\": \"917\",\n      \"descrizione\": \"WIEN\"\n    },\n    {\n      \"id\": \"1672\",\n      \"descrizione\": \"WODZISLAW SLASKI\"\n    },\n    {\n      \"id\": \"68\",\n      \"descrizione\": \"WROCLAW\"\n    },\n    {\n      \"id\": \"1330\",\n      \"descrizione\": \"ZADAR\"\n    },\n    {\n      \"id\": \"1333\",\n      \"descrizione\": \"ZAGREB\"\n    },\n    {\n      \"id\": \"41\",\n      \"descrizione\": \"ZAMBROW\"\n    },\n    {\n      \"id\": \"854\",\n      \"descrizione\": \"ZARAGOZA\"\n    },\n    {\n      \"id\": \"63\",\n      \"descrizione\": \"ZLOCIENIEC\"\n    },\n    {\n      \"id\": \"1721\",\n      \"descrizione\": \"ZUPANJA\"\n    },\n    {\n      \"id\": \"1563\",\n      \"descrizione\": \"ZURICH\"\n    },\n    {\n      \"id\": \"1167\",\n      \"descrizione\": \"ZVOLEN\"\n    }\n  ]\n}"
+				},
+				{
+					"id": "021efb96-3727-45f6-ab69-5ded7015a5a9",
+					"name": "app_cita_parentza_response.json",
+					"originalRequest": {
+						"url": "https://62.149.204.71/REST/data/corse/app_citta_partenza/9038d809b9aa39aa1354c1dd1e520298/20-05-2017",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, must-revalidate",
+							"name": "Cache-Control",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip",
+							"name": "Content-Encoding",
+							"description": "The type of encoding used on the data."
+						},
+						{
+							"key": "Content-Length",
+							"value": "3171",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 17 Mar 2017 12:14:00 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Expires",
+							"value": "0",
+							"name": "Expires",
+							"description": "Gives the date/time after which the response is considered stale"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=2, max=100",
+							"name": "Keep-Alive",
+							"description": "Custom header"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.2.22 (Ubuntu)",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding",
+							"name": "Vary",
+							"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Luracast Restler v2.1.0",
+							"name": "X-Powered-By",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 664,
+					"body": "{\n  \"citta\": [\n    {\n      \"id\": \"1493\",\n      \"descrizione\": \"AGRIGENTO\"\n    },\n    {\n      \"id\": \"876\",\n      \"descrizione\": \"AIX-EN-PROVENCE\"\n    },\n    {\n      \"id\": \"1201\",\n      \"descrizione\": \"ALBA ADRIATICA\"\n    },\n    {\n      \"id\": \"1355\",\n      \"descrizione\": \"ALCALA DE CHIVERT\"\n    },\n    {\n      \"id\": \"73\",\n      \"descrizione\": \"ALESSANDRIA\"\n    },\n    {\n      \"id\": \"94\",\n      \"descrizione\": \"ALICANTE\"\n    },\n    {\n      \"id\": \"796\",\n      \"descrizione\": \"AMSTERDAM\"\n    },\n    {\n      \"id\": \"835\",\n      \"descrizione\": \"ANCONA\"\n    },\n    {\n      \"id\": \"1154\",\n      \"descrizione\": \"ANGERS\"\n    },\n    {\n      \"id\": \"779\",\n      \"descrizione\": \"ANTWERPEN\"\n    },\n    {\n      \"id\": \"1280\",\n      \"descrizione\": \"AOSTA\"\n    },\n    {\n      \"id\": \"1566\",\n      \"descrizione\": \"AREZZO\"\n    },\n    {\n      \"id\": \"1476\",\n      \"descrizione\": \"ASCOLI PICENO\"\n    },\n    {\n      \"id\": \"1736\",\n      \"descrizione\": \"AUGUSTA\"\n    },\n    {\n      \"id\": \"1195\",\n      \"descrizione\": \"AVEZZANO\"\n    },\n    {\n      \"id\": \"865\",\n      \"descrizione\": \"AVIGNON\"\n    },\n    {\n      \"id\": \"1442\",\n      \"descrizione\": \"BARBERINO DI MUGELLO\"\n    },\n    {\n      \"id\": \"87\",\n      \"descrizione\": \"BARCELONA NORTE\"\n    },\n    {\n      \"id\": \"88\",\n      \"descrizione\": \"BARCELONA SANTS\"\n    },\n    {\n      \"id\": \"1039\",\n      \"descrizione\": \"BARI\"\n    },\n    {\n      \"id\": \"1254\",\n      \"descrizione\": \"BARLETTA\"\n    },\n    {\n      \"id\": \"1213\",\n      \"descrizione\": \"BATTIPAGLIA\"\n    },\n    {\n      \"id\": \"1194\",\n      \"descrizione\": \"BELLINZONA\"\n    },\n    {\n      \"id\": \"93\",\n      \"descrizione\": \"BENIDORM\"\n    },\n    {\n      \"id\": \"72\",\n      \"descrizione\": \"BERGAMO\"\n    },\n    {\n      \"id\": \"909\",\n      \"descrizione\": \"BERLIN\"\n    },\n    {\n      \"id\": \"1441\",\n      \"descrizione\": \"BETTOLLE\"\n    },\n    {\n      \"id\": \"1358\",\n      \"descrizione\": \"BEZIERS\"\n    },\n    {\n      \"id\": \"1042\",\n      \"descrizione\": \"BIALYSTOK\"\n    },\n    {\n      \"id\": \"837\",\n      \"descrizione\": \"BIBIONE\"\n    },\n    {\n      \"id\": \"873\",\n      \"descrizione\": \"BIELSKO BIALA\"\n    },\n    {\n      \"id\": \"1259\",\n      \"descrizione\": \"BOCHNIA\"\n    },\n    {\n      \"id\": \"31\",\n      \"descrizione\": \"BOLOGNA\"\n    },\n    {\n      \"id\": \"18\",\n      \"descrizione\": \"BOLZANO\"\n    },\n    {\n      \"id\": \"880\",\n      \"descrizione\": \"BORDEAUX\"\n    },\n    {\n      \"id\": \"768\",\n      \"descrizione\": \"BRATISLAVA\"\n    },\n    {\n      \"id\": \"793\",\n      \"descrizione\": \"BREDA\"\n    },\n    {\n      \"id\": \"1710\",\n      \"descrizione\": \"BREGENZ\"\n    },\n    {\n      \"id\": \"15\",\n      \"descrizione\": \"BRESCIA\"\n    },\n    {\n      \"id\": \"1037\",\n      \"descrizione\": \"BRINDISI\"\n    },\n    {\n      \"id\": \"776\",\n      \"descrizione\": \"BRUSSEL\"\n    },\n    {\n      \"id\": \"831\",\n      \"descrizione\": \"BRZESKO\"\n    },\n    {\n      \"id\": \"775\",\n      \"descrizione\": \"BUDAPEST\"\n    },\n    {\n      \"id\": \"69\",\n      \"descrizione\": \"BYDGOSZCZ\"\n    },\n    {\n      \"id\": \"1475\",\n      \"descrizione\": \"CACCAMO\"\n    },\n    {\n      \"id\": \"1452\",\n      \"descrizione\": \"CAEN\"\n    },\n    {\n      \"id\": \"1634\",\n      \"descrizione\": \"CAIANELLO\"\n    },\n    {\n      \"id\": \"1495\",\n      \"descrizione\": \"CALTANISSETTA\"\n    },\n    {\n      \"id\": \"1494\",\n      \"descrizione\": \"CANICATTI\"\n    },\n    {\n      \"id\": \"1632\",\n      \"descrizione\": \"CANNES\"\n    },\n    {\n      \"id\": \"1279\",\n      \"descrizione\": \"CAORLE\"\n    },\n    {\n      \"id\": \"1719\",\n      \"descrizione\": \"CARCASSONNE\"\n    },\n    {\n      \"id\": \"1471\",\n      \"descrizione\": \"CASENOVE\"\n    },\n    {\n      \"id\": \"1214\",\n      \"descrizione\": \"CASERTA\"\n    },\n    {\n      \"id\": \"1228\",\n      \"descrizione\": \"CASSINO\"\n    },\n    {\n      \"id\": \"1737\",\n      \"descrizione\": \"CASTELLANETA\"\n    },\n    {\n      \"id\": \"91\",\n      \"descrizione\": \"CASTELLON\"\n    },\n    {\n      \"id\": \"1502\",\n      \"descrizione\": \"CATANIA\"\n    },\n    {\n      \"id\": \"959\",\n      \"descrizione\": \"CATTOLICA\"\n    },\n    {\n      \"id\": \"1040\",\n      \"descrizione\": \"CERIGNOLA\"\n    },\n    {\n      \"id\": \"1208\",\n      \"descrizione\": \"CESENA\"\n    },\n    {\n      \"id\": \"1286\",\n      \"descrizione\": \"CHAMONIX-MONT-BLANC\"\n    },\n    {\n      \"id\": \"1483\",\n      \"descrizione\": \"CHIETI\"\n    },\n    {\n      \"id\": \"1203\",\n      \"descrizione\": \"CIVITANOVA MARCHE\"\n    },\n    {\n      \"id\": \"1472\",\n      \"descrizione\": \"COLFIORITO\"\n    },\n    {\n      \"id\": \"1438\",\n      \"descrizione\": \"COLLE DI VAL D'ELSA\"\n    },\n    {\n      \"id\": \"1499\",\n      \"descrizione\": \"COMISO\"\n    },\n    {\n      \"id\": \"79\",\n      \"descrizione\": \"COSENZA\"\n    },\n    {\n      \"id\": \"1700\",\n      \"descrizione\": \"COURMAYER\"\n    },\n    {\n      \"id\": \"1728\",\n      \"descrizione\": \"CRIKVENICA\"\n    },\n    {\n      \"id\": \"1550\",\n      \"descrizione\": \"CUPRA MARITTIMA\"\n    },\n    {\n      \"id\": \"1024\",\n      \"descrizione\": \"CZAPLINEK\"\n    },\n    {\n      \"id\": \"34\",\n      \"descrizione\": \"CZESTOCHOWA\"\n    },\n    {\n      \"id\": \"1724\",\n      \"descrizione\": \"DAKOVO\"\n    },\n    {\n      \"id\": \"841\",\n      \"descrizione\": \"DEBICA\"\n    },\n    {\n      \"id\": \"795\",\n      \"descrizione\": \"DEN HAAG\"\n    },\n    {\n      \"id\": \"957\",\n      \"descrizione\": \"DIJON\"\n    },\n    {\n      \"id\": \"766\",\n      \"descrizione\": \"DOVER\"\n    },\n    {\n      \"id\": \"1445\",\n      \"descrizione\": \"EBOLI\"\n    },\n    {\n      \"id\": \"1464\",\n      \"descrizione\": \"EMPOLI\"\n    },\n    {\n      \"id\": \"1496\",\n      \"descrizione\": \"ENNA\"\n    },\n    {\n      \"id\": \"1206\",\n      \"descrizione\": \"FANO\"\n    },\n    {\n      \"id\": \"932\",\n      \"descrizione\": \"FERRARA\"\n    },\n    {\n      \"id\": \"84\",\n      \"descrizione\": \"FIGUERAS\"\n    },\n    {\n      \"id\": \"30\",\n      \"descrizione\": \"FIRENZE\"\n    },\n    {\n      \"id\": \"1041\",\n      \"descrizione\": \"FOGGIA\"\n    },\n    {\n      \"id\": \"1209\",\n      \"descrizione\": \"FORLI\"\n    },\n    {\n      \"id\": \"1261\",\n      \"descrizione\": \"FRANCAVILLA FONTANA\"\n    },\n    {\n      \"id\": \"901\",\n      \"descrizione\": \"FRANKFURT\"\n    },\n    {\n      \"id\": \"1031\",\n      \"descrizione\": \"FROSINONE\"\n    },\n    {\n      \"id\": \"1738\",\n      \"descrizione\": \"GALLIPOLI\"\n    },\n    {\n      \"id\": \"1282\",\n      \"descrizione\": \"GENEVE\"\n    },\n    {\n      \"id\": \"71\",\n      \"descrizione\": \"GENOVA\"\n    },\n    {\n      \"id\": \"1520\",\n      \"descrizione\": \"GIOIA DEL COLLE\"\n    },\n    {\n      \"id\": \"1599\",\n      \"descrizione\": \"GIOIA TAURO\"\n    },\n    {\n      \"id\": \"85\",\n      \"descrizione\": \"GIRONA\"\n    },\n    {\n      \"id\": \"1199\",\n      \"descrizione\": \"GIULIANOVA\"\n    },\n    {\n      \"id\": \"1625\",\n      \"descrizione\": \"GLIWICE\"\n    },\n    {\n      \"id\": \"1230\",\n      \"descrizione\": \"GNIEZNO\"\n    },\n    {\n      \"id\": \"842\",\n      \"descrizione\": \"GORLICE\"\n    },\n    {\n      \"id\": \"1732\",\n      \"descrizione\": \"GOSPIC\"\n    },\n    {\n      \"id\": \"26\",\n      \"descrizione\": \"GRAZ\"\n    },\n    {\n      \"id\": \"1188\",\n      \"descrizione\": \"GRENOBLE\"\n    },\n    {\n      \"id\": \"1458\",\n      \"descrizione\": \"GROSSETO\"\n    },\n    {\n      \"id\": \"1490\",\n      \"descrizione\": \"GROTTAMMARE\"\n    },\n    {\n      \"id\": \"1393\",\n      \"descrizione\": \"HAMBURG\"\n    },\n    {\n      \"id\": \"1725\",\n      \"descrizione\": \"HUMENNE\"\n    },\n    {\n      \"id\": \"1511\",\n      \"descrizione\": \"HYTHE\"\n    },\n    {\n      \"id\": \"1706\",\n      \"descrizione\": \"INGOLSTADT\"\n    },\n    {\n      \"id\": \"829\",\n      \"descrizione\": \"JAROSLAW\"\n    },\n    {\n      \"id\": \"852\",\n      \"descrizione\": \"JASLO\"\n    },\n    {\n      \"id\": \"52\",\n      \"descrizione\": \"JEDRZEJOW\"\n    },\n    {\n      \"id\": \"899\",\n      \"descrizione\": \"KARLSRUHE\"\n    },\n    {\n      \"id\": \"33\",\n      \"descrizione\": \"KATOWICE\"\n    },\n    {\n      \"id\": \"1263\",\n      \"descrizione\": \"KEPNO\"\n    },\n    {\n      \"id\": \"54\",\n      \"descrizione\": \"KIELCE\"\n    },\n    {\n      \"id\": \"25\",\n      \"descrizione\": \"KLAGENFURT\"\n    },\n    {\n      \"id\": \"798\",\n      \"descrizione\": \"KLODZKO\"\n    },\n    {\n      \"id\": \"804\",\n      \"descrizione\": \"KONIN\"\n    },\n    {\n      \"id\": \"763\",\n      \"descrizione\": \"KOSICE\"\n    },\n    {\n      \"id\": \"826\",\n      \"descrizione\": \"KRAKOW\"\n    },\n    {\n      \"id\": \"853\",\n      \"descrizione\": \"KROSNO\"\n    },\n    {\n      \"id\": \"1084\",\n      \"descrizione\": \"LAMEZIA TERME\"\n    },\n    {\n      \"id\": \"1518\",\n      \"descrizione\": \"LANCIANO\"\n    },\n    {\n      \"id\": \"924\",\n      \"descrizione\": \"L'AQUILA\"\n    },\n    {\n      \"id\": \"823\",\n      \"descrizione\": \"LA SPEZIA\"\n    },\n    {\n      \"id\": \"1629\",\n      \"descrizione\": \"LE CANNET\"\n    },\n    {\n      \"id\": \"1253\",\n      \"descrizione\": \"LECCE\"\n    },\n    {\n      \"id\": \"1556\",\n      \"descrizione\": \"LEIPZIG\"\n    },\n    {\n      \"id\": \"1500\",\n      \"descrizione\": \"LENTINI\"\n    },\n    {\n      \"id\": \"46\",\n      \"descrizione\": \"LESZNO\"\n    },\n    {\n      \"id\": \"836\",\n      \"descrizione\": \"LIDO DI JESOLO\"\n    },\n    {\n      \"id\": \"767\",\n      \"descrizione\": \"LIEGE\"\n    },\n    {\n      \"id\": \"838\",\n      \"descrizione\": \"LIGNANO\"\n    },\n    {\n      \"id\": \"1000\",\n      \"descrizione\": \"LILLE\"\n    },\n    {\n      \"id\": \"974\",\n      \"descrizione\": \"LIMANOWA\"\n    },\n    {\n      \"id\": \"1711\",\n      \"descrizione\": \"LINDAU\"\n    },\n    {\n      \"id\": \"821\",\n      \"descrizione\": \"LIVORNO\"\n    },\n    {\n      \"id\": \"1448\",\n      \"descrizione\": \"LJUBLJANA\"\n    },\n    {\n      \"id\": \"86\",\n      \"descrizione\": \"LLORET DE MAR\"\n    },\n    {\n      \"id\": \"35\",\n      \"descrizione\": \"LODZ\"\n    },\n    {\n      \"id\": \"774\",\n      \"descrizione\": \"LONDON\"\n    },\n    {\n      \"id\": \"1690\",\n      \"descrizione\": \"LOWICZ\"\n    },\n    {\n      \"id\": \"58\",\n      \"descrizione\": \"LUBLIN\"\n    },\n    {\n      \"id\": \"1691\",\n      \"descrizione\": \"LUBLINIEC\"\n    },\n    {\n      \"id\": \"949\",\n      \"descrizione\": \"LUCCA\"\n    },\n    {\n      \"id\": \"1193\",\n      \"descrizione\": \"LUGANO\"\n    },\n    {\n      \"id\": \"998\",\n      \"descrizione\": \"LUXEMBOURG\"\n    },\n    {\n      \"id\": \"1628\",\n      \"descrizione\": \"LUZERN\"\n    },\n    {\n      \"id\": \"765\",\n      \"descrizione\": \"LYON\"\n    },\n    {\n      \"id\": \"1488\",\n      \"descrizione\": \"MACERATA\"\n    },\n    {\n      \"id\": \"855\",\n      \"descrizione\": \"MADRID\"\n    },\n    {\n      \"id\": \"1602\",\n      \"descrizione\": \"MANGONE\"\n    },\n    {\n      \"id\": \"1334\",\n      \"descrizione\": \"MANNHEIM\"\n    },\n    {\n      \"id\": \"1569\",\n      \"descrizione\": \"MANTOVA\"\n    },\n    {\n      \"id\": \"875\",\n      \"descrizione\": \"MARSEILLE\"\n    },\n    {\n      \"id\": \"1202\",\n      \"descrizione\": \"MARTINSICURO\"\n    },\n    {\n      \"id\": \"1712\",\n      \"descrizione\": \"MEMMINGEN\"\n    },\n    {\n      \"id\": \"1504\",\n      \"descrizione\": \"MESSINA\"\n    },\n    {\n      \"id\": \"892\",\n      \"descrizione\": \"METZ\"\n    },\n    {\n      \"id\": \"1726\",\n      \"descrizione\": \"MICHALOVCE\"\n    },\n    {\n      \"id\": \"14\",\n      \"descrizione\": \"MILANO\"\n    },\n    {\n      \"id\": \"948\",\n      \"descrizione\": \"MODENA\"\n    },\n    {\n      \"id\": \"1497\",\n      \"descrizione\": \"MODICA\"\n    },\n    {\n      \"id\": \"1466\",\n      \"descrizione\": \"MONOPOLI\"\n    },\n    {\n      \"id\": \"895\",\n      \"descrizione\": \"MONTECATINI TERME\"\n    },\n    {\n      \"id\": \"1439\",\n      \"descrizione\": \"MONTERIGGIONI\"\n    },\n    {\n      \"id\": \"1482\",\n      \"descrizione\": \"MONTESILVANO\"\n    },\n    {\n      \"id\": \"866\",\n      \"descrizione\": \"MONTPELLIER\"\n    },\n    {\n      \"id\": \"1521\",\n      \"descrizione\": \"MOTTOLA\"\n    },\n    {\n      \"id\": \"1474\",\n      \"descrizione\": \"MUCCIA\"\n    },\n    {\n      \"id\": \"1190\",\n      \"descrizione\": \"MUNCHEN\"\n    },\n    {\n      \"id\": \"95\",\n      \"descrizione\": \"MURCIA\"\n    },\n    {\n      \"id\": \"1227\",\n      \"descrizione\": \"NAGYKANIZSA\"\n    },\n    {\n      \"id\": \"1357\",\n      \"descrizione\": \"NANCY\"\n    },\n    {\n      \"id\": \"1055\",\n      \"descrizione\": \"NANTES\"\n    },\n    {\n      \"id\": \"28\",\n      \"descrizione\": \"NAPOLI\"\n    },\n    {\n      \"id\": \"1278\",\n      \"descrizione\": \"NARBONNE\"\n    },\n    {\n      \"id\": \"864\",\n      \"descrizione\": \"NICE\"\n    },\n    {\n      \"id\": \"877\",\n      \"descrizione\": \"NIMES\"\n    },\n    {\n      \"id\": \"1166\",\n      \"descrizione\": \"NITRA\"\n    },\n    {\n      \"id\": \"1720\",\n      \"descrizione\": \"NOVA GRADISKA\"\n    },\n    {\n      \"id\": \"919\",\n      \"descrizione\": \"NOVARA\"\n    },\n    {\n      \"id\": \"1729\",\n      \"descrizione\": \"NOVI VINODOLSKI\"\n    },\n    {\n      \"id\": \"839\",\n      \"descrizione\": \"NOWY SACZ\"\n    },\n    {\n      \"id\": \"1349\",\n      \"descrizione\": \"NURNBERG\"\n    },\n    {\n      \"id\": \"961\",\n      \"descrizione\": \"ORTE\"\n    },\n    {\n      \"id\": \"1715\",\n      \"descrizione\": \"ORTHEZ\"\n    },\n    {\n      \"id\": \"1623\",\n      \"descrizione\": \"ORTONA\"\n    },\n    {\n      \"id\": \"1696\",\n      \"descrizione\": \"OSIJEK\"\n    },\n    {\n      \"id\": \"984\",\n      \"descrizione\": \"OSTROW MAZOWIECKA\"\n    },\n    {\n      \"id\": \"1731\",\n      \"descrizione\": \"OTOCAC\"\n    },\n    {\n      \"id\": \"32\",\n      \"descrizione\": \"PADOVA\"\n    },\n    {\n      \"id\": \"1492\",\n      \"descrizione\": \"PALERMO\"\n    },\n    {\n      \"id\": \"1598\",\n      \"descrizione\": \"PALMI\"\n    },\n    {\n      \"id\": \"777\",\n      \"descrizione\": \"PARIS\"\n    },\n    {\n      \"id\": \"820\",\n      \"descrizione\": \"PARMA\"\n    },\n    {\n      \"id\": \"1716\",\n      \"descrizione\": \"PAU\"\n    },\n    {\n      \"id\": \"1489\",\n      \"descrizione\": \"PEDASO\"\n    },\n    {\n      \"id\": \"867\",\n      \"descrizione\": \"PERPIGNAN\"\n    },\n    {\n      \"id\": \"894\",\n      \"descrizione\": \"PERUGIA\"\n    },\n    {\n      \"id\": \"926\",\n      \"descrizione\": \"PESARO\"\n    },\n    {\n      \"id\": \"1050\",\n      \"descrizione\": \"PESCARA\"\n    },\n    {\n      \"id\": \"824\",\n      \"descrizione\": \"PIACENZA\"\n    },\n    {\n      \"id\": \"1145\",\n      \"descrizione\": \"PIEST ANY\"\n    },\n    {\n      \"id\": \"61\",\n      \"descrizione\": \"PILA\"\n    },\n    {\n      \"id\": \"1402\",\n      \"descrizione\": \"PILSEN\"\n    },\n    {\n      \"id\": \"840\",\n      \"descrizione\": \"PILZNO\"\n    },\n    {\n      \"id\": \"1480\",\n      \"descrizione\": \"PINETO\"\n    },\n    {\n      \"id\": \"822\",\n      \"descrizione\": \"PISA\"\n    },\n    {\n      \"id\": \"1447\",\n      \"descrizione\": \"PISTOIA\"\n    },\n    {\n      \"id\": \"1437\",\n      \"descrizione\": \"POGGIBONSI\"\n    },\n    {\n      \"id\": \"1088\",\n      \"descrizione\": \"POLICORO\"\n    },\n    {\n      \"id\": \"1444\",\n      \"descrizione\": \"POLLA\"\n    },\n    {\n      \"id\": \"1216\",\n      \"descrizione\": \"POMPEI\"\n    },\n    {\n      \"id\": \"1508\",\n      \"descrizione\": \"POPOLI\"\n    },\n    {\n      \"id\": \"772\",\n      \"descrizione\": \"POPRAD\"\n    },\n    {\n      \"id\": \"1477\",\n      \"descrizione\": \"PORTO D'ASCOLI\"\n    },\n    {\n      \"id\": \"1572\",\n      \"descrizione\": \"PORTO RECANATI\"\n    },\n    {\n      \"id\": \"1205\",\n      \"descrizione\": \"PORTO SAN GIORGIO\"\n    },\n    {\n      \"id\": \"1309\",\n      \"descrizione\": \"POSTOJNA\"\n    },\n    {\n      \"id\": \"45\",\n      \"descrizione\": \"POZNAN\"\n    },\n    {\n      \"id\": \"754\",\n      \"descrizione\": \"PRAHA\"\n    },\n    {\n      \"id\": \"1446\",\n      \"descrizione\": \"PRATO\"\n    },\n    {\n      \"id\": \"1507\",\n      \"descrizione\": \"PRATOLA PELIGNA\"\n    },\n    {\n      \"id\": \"773\",\n      \"descrizione\": \"PRESOV\"\n    },\n    {\n      \"id\": \"830\",\n      \"descrizione\": \"PRZEMYSL\"\n    },\n    {\n      \"id\": \"960\",\n      \"descrizione\": \"PRZEWORSK\"\n    },\n    {\n      \"id\": \"1630\",\n      \"descrizione\": \"PUGET SUR ARGENS\"\n    },\n    {\n      \"id\": \"57\",\n      \"descrizione\": \"PULAWY\"\n    },\n    {\n      \"id\": \"56\",\n      \"descrizione\": \"RADOM\"\n    },\n    {\n      \"id\": \"1656\",\n      \"descrizione\": \"RADOMSKO\"\n    },\n    {\n      \"id\": \"1498\",\n      \"descrizione\": \"RAGUSA\"\n    },\n    {\n      \"id\": \"871\",\n      \"descrizione\": \"RAVENNA\"\n    },\n    {\n      \"id\": \"1626\",\n      \"descrizione\": \"REGENSBURG\"\n    },\n    {\n      \"id\": \"1596\",\n      \"descrizione\": \"REGGIO CALABRIA\"\n    },\n    {\n      \"id\": \"1030\",\n      \"descrizione\": \"REGGIO EMILIA\"\n    },\n    {\n      \"id\": \"1603\",\n      \"descrizione\": \"RENDE\"\n    },\n    {\n      \"id\": \"1067\",\n      \"descrizione\": \"RENNES\"\n    },\n    {\n      \"id\": \"870\",\n      \"descrizione\": \"RICCIONE\"\n    },\n    {\n      \"id\": \"1329\",\n      \"descrizione\": \"RIJEKA\"\n    },\n    {\n      \"id\": \"825\",\n      \"descrizione\": \"RIMINI\"\n    },\n    {\n      \"id\": \"29\",\n      \"descrizione\": \"ROMA\"\n    },\n    {\n      \"id\": \"1666\",\n      \"descrizione\": \"ROPCZYCE\"\n    },\n    {\n      \"id\": \"1600\",\n      \"descrizione\": \"ROSARNO\"\n    },\n    {\n      \"id\": \"1479\",\n      \"descrizione\": \"ROSETO DEGLI ABRUZZI\"\n    },\n    {\n      \"id\": \"794\",\n      \"descrizione\": \"ROTTERDAM\"\n    },\n    {\n      \"id\": \"1453\",\n      \"descrizione\": \"ROUEN\"\n    },\n    {\n      \"id\": \"1250\",\n      \"descrizione\": \"RYBNIK\"\n    },\n    {\n      \"id\": \"828\",\n      \"descrizione\": \"RZESZOW\"\n    },\n    {\n      \"id\": \"1627\",\n      \"descrizione\": \"SAINT GALLEN\"\n    },\n    {\n      \"id\": \"1718\",\n      \"descrizione\": \"SAINT GAUDENS\"\n    },\n    {\n      \"id\": \"1443\",\n      \"descrizione\": \"SALA CONSILINA\"\n    },\n    {\n      \"id\": \"1049\",\n      \"descrizione\": \"SALERNO\"\n    },\n    {\n      \"id\": \"90\",\n      \"descrizione\": \"SALOU MARITIMO\"\n    },\n    {\n      \"id\": \"1051\",\n      \"descrizione\": \"SAN BENEDETTO DEL TRONTO\"\n    },\n    {\n      \"id\": \"1196\",\n      \"descrizione\": \"SAN GABRIELE\"\n    },\n    {\n      \"id\": \"869\",\n      \"descrizione\": \"SANOK\"\n    },\n    {\n      \"id\": \"1101\",\n      \"descrizione\": \"SAN REMO\"\n    },\n    {\n      \"id\": \"1570\",\n      \"descrizione\": \"SARZANA\"\n    },\n    {\n      \"id\": \"82\",\n      \"descrizione\": \"SAVONA\"\n    },\n    {\n      \"id\": \"1730\",\n      \"descrizione\": \"SENJ\"\n    },\n    {\n      \"id\": \"1473\",\n      \"descrizione\": \"SERRAVALLE\"\n    },\n    {\n      \"id\": \"1087\",\n      \"descrizione\": \"SIBARI\"\n    },\n    {\n      \"id\": \"1331\",\n      \"descrizione\": \"SIBENIK\"\n    },\n    {\n      \"id\": \"1523\",\n      \"descrizione\": \"SICIGNANO\"\n    },\n    {\n      \"id\": \"893\",\n      \"descrizione\": \"SIENA\"\n    },\n    {\n      \"id\": \"1459\",\n      \"descrizione\": \"SIERADZ\"\n    },\n    {\n      \"id\": \"1481\",\n      \"descrizione\": \"SILVI MARINA\"\n    },\n    {\n      \"id\": \"1404\",\n      \"descrizione\": \"SIOFOK\"\n    },\n    {\n      \"id\": \"1501\",\n      \"descrizione\": \"SIRACUSA\"\n    },\n    {\n      \"id\": \"833\",\n      \"descrizione\": \"SKARZYSKO\"\n    },\n    {\n      \"id\": \"1695\",\n      \"descrizione\": \"SLAVONSKI BROD\"\n    },\n    {\n      \"id\": \"1469\",\n      \"descrizione\": \"S.MARIA DEGLI ANGELI\"\n    },\n    {\n      \"id\": \"1689\",\n      \"descrizione\": \"SOCHACZEW\"\n    },\n    {\n      \"id\": \"1564\",\n      \"descrizione\": \"SORA\"\n    },\n    {\n      \"id\": \"1085\",\n      \"descrizione\": \"SPEZZANO ALBANESE\"\n    },\n    {\n      \"id\": \"1332\",\n      \"descrizione\": \"SPLIT\"\n    },\n    {\n      \"id\": \"994\",\n      \"descrizione\": \"STARGARD SZCZECINSKI\"\n    },\n    {\n      \"id\": \"891\",\n      \"descrizione\": \"STRASBOURG\"\n    },\n    {\n      \"id\": \"898\",\n      \"descrizione\": \"STUTTGART\"\n    },\n    {\n      \"id\": \"1350\",\n      \"descrizione\": \"SULMONA\"\n    },\n    {\n      \"id\": \"65\",\n      \"descrizione\": \"SZCZECIN\"\n    },\n    {\n      \"id\": \"996\",\n      \"descrizione\": \"SZCZECINEK\"\n    },\n    {\n      \"id\": \"1048\",\n      \"descrizione\": \"TARANTO\"\n    },\n    {\n      \"id\": \"1717\",\n      \"descrizione\": \"TARBES\"\n    },\n    {\n      \"id\": \"827\",\n      \"descrizione\": \"TARNOW\"\n    },\n    {\n      \"id\": \"89\",\n      \"descrizione\": \"TARRAGONA\"\n    },\n    {\n      \"id\": \"925\",\n      \"descrizione\": \"TERAMO\"\n    },\n    {\n      \"id\": \"1255\",\n      \"descrizione\": \"TERMOLI\"\n    },\n    {\n      \"id\": \"81\",\n      \"descrizione\": \"TORINO\"\n    },\n    {\n      \"id\": \"807\",\n      \"descrizione\": \"TORUN\"\n    },\n    {\n      \"id\": \"874\",\n      \"descrizione\": \"TOULON\"\n    },\n    {\n      \"id\": \"878\",\n      \"descrizione\": \"TOULOUSE\"\n    },\n    {\n      \"id\": \"1069\",\n      \"descrizione\": \"TOURS\"\n    },\n    {\n      \"id\": \"769\",\n      \"descrizione\": \"TRENCIN\"\n    },\n    {\n      \"id\": \"16\",\n      \"descrizione\": \"TRENTO\"\n    },\n    {\n      \"id\": \"945\",\n      \"descrizione\": \"TRIESTE\"\n    },\n    {\n      \"id\": \"1144\",\n      \"descrizione\": \"TRNAVA\"\n    },\n    {\n      \"id\": \"1733\",\n      \"descrizione\": \"TROGIR\"\n    },\n    {\n      \"id\": \"958\",\n      \"descrizione\": \"UDINE\"\n    },\n    {\n      \"id\": \"997\",\n      \"descrizione\": \"ULM\"\n    },\n    {\n      \"id\": \"1505\",\n      \"descrizione\": \"URBINO\"\n    },\n    {\n      \"id\": \"936\",\n      \"descrizione\": \"UTRECHT\"\n    },\n    {\n      \"id\": \"92\",\n      \"descrizione\": \"VALENCIA\"\n    },\n    {\n      \"id\": \"1693\",\n      \"descrizione\": \"VALLE DEL SALTO\"\n    },\n    {\n      \"id\": \"1197\",\n      \"descrizione\": \"VAL VOMANO\"\n    },\n    {\n      \"id\": \"1519\",\n      \"descrizione\": \"VASTO\"\n    },\n    {\n      \"id\": \"80\",\n      \"descrizione\": \"VENEZIA\"\n    },\n    {\n      \"id\": \"24\",\n      \"descrizione\": \"VENEZIA\\/MESTRE\"\n    },\n    {\n      \"id\": \"83\",\n      \"descrizione\": \"VENTIMIGLIA\"\n    },\n    {\n      \"id\": \"17\",\n      \"descrizione\": \"VERONA\"\n    },\n    {\n      \"id\": \"811\",\n      \"descrizione\": \"VIAREGGIO\"\n    },\n    {\n      \"id\": \"1601\",\n      \"descrizione\": \"VIBO VALENTIA\"\n    },\n    {\n      \"id\": \"955\",\n      \"descrizione\": \"VICENZA\"\n    },\n    {\n      \"id\": \"1597\",\n      \"descrizione\": \"VILLA SAN GIOVANNI\"\n    },\n    {\n      \"id\": \"1722\",\n      \"descrizione\": \"VINKOVCI\"\n    },\n    {\n      \"id\": \"1723\",\n      \"descrizione\": \"VUKOVAR\"\n    },\n    {\n      \"id\": \"819\",\n      \"descrizione\": \"WARSZAWA\"\n    },\n    {\n      \"id\": \"917\",\n      \"descrizione\": \"WIEN\"\n    },\n    {\n      \"id\": \"1672\",\n      \"descrizione\": \"WODZISLAW SLASKI\"\n    },\n    {\n      \"id\": \"68\",\n      \"descrizione\": \"WROCLAW\"\n    },\n    {\n      \"id\": \"1330\",\n      \"descrizione\": \"ZADAR\"\n    },\n    {\n      \"id\": \"1333\",\n      \"descrizione\": \"ZAGREB\"\n    },\n    {\n      \"id\": \"41\",\n      \"descrizione\": \"ZAMBROW\"\n    },\n    {\n      \"id\": \"854\",\n      \"descrizione\": \"ZARAGOZA\"\n    },\n    {\n      \"id\": \"63\",\n      \"descrizione\": \"ZLOCIENIEC\"\n    },\n    {\n      \"id\": \"1721\",\n      \"descrizione\": \"ZUPANJA\"\n    },\n    {\n      \"id\": \"1563\",\n      \"descrizione\": \"ZURICH\"\n    },\n    {\n      \"id\": \"1167\",\n      \"descrizione\": \"ZVOLEN\"\n    }\n  ]\n}"
+				},
+				{
+					"id": "006b559b-5b7d-4001-ab22-6e3de379acfe",
+					"name": "balrour app citta partenza",
+					"originalRequest": {
+						"url": "https://62.149.204.71/REST/data/corse/app_citta_partenza/9038d809b9aa39aa1354c1dd1e520298/20-05-2017",
+						"method": "GET",
+						"header": [],
+						"body": {}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, must-revalidate",
+							"name": "Cache-Control",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip",
+							"name": "Content-Encoding",
+							"description": "The type of encoding used on the data."
+						},
+						{
+							"key": "Content-Length",
+							"value": "3171",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 23 Mar 2017 11:05:52 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Expires",
+							"value": "0",
+							"name": "Expires",
+							"description": "Gives the date/time after which the response is considered stale"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=2, max=100",
+							"name": "Keep-Alive",
+							"description": "Custom header"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.2.22 (Ubuntu)",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding",
+							"name": "Vary",
+							"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Luracast Restler v2.1.0",
+							"name": "X-Powered-By",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 2884,
+					"body": "{\n  \"citta\": [\n    {\n      \"id\": \"1493\",\n      \"descrizione\": \"AGRIGENTO\"\n    },\n    {\n      \"id\": \"876\",\n      \"descrizione\": \"AIX-EN-PROVENCE\"\n    },\n    {\n      \"id\": \"1201\",\n      \"descrizione\": \"ALBA ADRIATICA\"\n    },\n    {\n      \"id\": \"1355\",\n      \"descrizione\": \"ALCALA DE CHIVERT\"\n    },\n    {\n      \"id\": \"73\",\n      \"descrizione\": \"ALESSANDRIA\"\n    },\n    {\n      \"id\": \"94\",\n      \"descrizione\": \"ALICANTE\"\n    },\n    {\n      \"id\": \"796\",\n      \"descrizione\": \"AMSTERDAM\"\n    },\n    {\n      \"id\": \"835\",\n      \"descrizione\": \"ANCONA\"\n    },\n    {\n      \"id\": \"1154\",\n      \"descrizione\": \"ANGERS\"\n    },\n    {\n      \"id\": \"779\",\n      \"descrizione\": \"ANTWERPEN\"\n    },\n    {\n      \"id\": \"1280\",\n      \"descrizione\": \"AOSTA\"\n    },\n    {\n      \"id\": \"1566\",\n      \"descrizione\": \"AREZZO\"\n    },\n    {\n      \"id\": \"1476\",\n      \"descrizione\": \"ASCOLI PICENO\"\n    },\n    {\n      \"id\": \"1736\",\n      \"descrizione\": \"AUGUSTA\"\n    },\n    {\n      \"id\": \"1195\",\n      \"descrizione\": \"AVEZZANO\"\n    },\n    {\n      \"id\": \"865\",\n      \"descrizione\": \"AVIGNON\"\n    },\n    {\n      \"id\": \"1442\",\n      \"descrizione\": \"BARBERINO DI MUGELLO\"\n    },\n    {\n      \"id\": \"87\",\n      \"descrizione\": \"BARCELONA NORTE\"\n    },\n    {\n      \"id\": \"88\",\n      \"descrizione\": \"BARCELONA SANTS\"\n    },\n    {\n      \"id\": \"1039\",\n      \"descrizione\": \"BARI\"\n    },\n    {\n      \"id\": \"1254\",\n      \"descrizione\": \"BARLETTA\"\n    },\n    {\n      \"id\": \"1213\",\n      \"descrizione\": \"BATTIPAGLIA\"\n    },\n    {\n      \"id\": \"1194\",\n      \"descrizione\": \"BELLINZONA\"\n    },\n    {\n      \"id\": \"93\",\n      \"descrizione\": \"BENIDORM\"\n    },\n    {\n      \"id\": \"72\",\n      \"descrizione\": \"BERGAMO\"\n    },\n    {\n      \"id\": \"909\",\n      \"descrizione\": \"BERLIN\"\n    },\n    {\n      \"id\": \"1441\",\n      \"descrizione\": \"BETTOLLE\"\n    },\n    {\n      \"id\": \"1358\",\n      \"descrizione\": \"BEZIERS\"\n    },\n    {\n      \"id\": \"1042\",\n      \"descrizione\": \"BIALYSTOK\"\n    },\n    {\n      \"id\": \"837\",\n      \"descrizione\": \"BIBIONE\"\n    },\n    {\n      \"id\": \"873\",\n      \"descrizione\": \"BIELSKO BIALA\"\n    },\n    {\n      \"id\": \"1259\",\n      \"descrizione\": \"BOCHNIA\"\n    },\n    {\n      \"id\": \"31\",\n      \"descrizione\": \"BOLOGNA\"\n    },\n    {\n      \"id\": \"18\",\n      \"descrizione\": \"BOLZANO\"\n    },\n    {\n      \"id\": \"880\",\n      \"descrizione\": \"BORDEAUX\"\n    },\n    {\n      \"id\": \"768\",\n      \"descrizione\": \"BRATISLAVA\"\n    },\n    {\n      \"id\": \"793\",\n      \"descrizione\": \"BREDA\"\n    },\n    {\n      \"id\": \"1710\",\n      \"descrizione\": \"BREGENZ\"\n    },\n    {\n      \"id\": \"15\",\n      \"descrizione\": \"BRESCIA\"\n    },\n    {\n      \"id\": \"1037\",\n      \"descrizione\": \"BRINDISI\"\n    },\n    {\n      \"id\": \"776\",\n      \"descrizione\": \"BRUSSEL\"\n    },\n    {\n      \"id\": \"831\",\n      \"descrizione\": \"BRZESKO\"\n    },\n    {\n      \"id\": \"775\",\n      \"descrizione\": \"BUDAPEST\"\n    },\n    {\n      \"id\": \"69\",\n      \"descrizione\": \"BYDGOSZCZ\"\n    },\n    {\n      \"id\": \"1475\",\n      \"descrizione\": \"CACCAMO\"\n    },\n    {\n      \"id\": \"1452\",\n      \"descrizione\": \"CAEN\"\n    },\n    {\n      \"id\": \"1634\",\n      \"descrizione\": \"CAIANELLO\"\n    },\n    {\n      \"id\": \"1495\",\n      \"descrizione\": \"CALTANISSETTA\"\n    },\n    {\n      \"id\": \"1494\",\n      \"descrizione\": \"CANICATTI\"\n    },\n    {\n      \"id\": \"1632\",\n      \"descrizione\": \"CANNES\"\n    },\n    {\n      \"id\": \"1279\",\n      \"descrizione\": \"CAORLE\"\n    },\n    {\n      \"id\": \"1719\",\n      \"descrizione\": \"CARCASSONNE\"\n    },\n    {\n      \"id\": \"1471\",\n      \"descrizione\": \"CASENOVE\"\n    },\n    {\n      \"id\": \"1214\",\n      \"descrizione\": \"CASERTA\"\n    },\n    {\n      \"id\": \"1228\",\n      \"descrizione\": \"CASSINO\"\n    },\n    {\n      \"id\": \"1737\",\n      \"descrizione\": \"CASTELLANETA\"\n    },\n    {\n      \"id\": \"91\",\n      \"descrizione\": \"CASTELLON\"\n    },\n    {\n      \"id\": \"1502\",\n      \"descrizione\": \"CATANIA\"\n    },\n    {\n      \"id\": \"959\",\n      \"descrizione\": \"CATTOLICA\"\n    },\n    {\n      \"id\": \"1040\",\n      \"descrizione\": \"CERIGNOLA\"\n    },\n    {\n      \"id\": \"1208\",\n      \"descrizione\": \"CESENA\"\n    },\n    {\n      \"id\": \"1286\",\n      \"descrizione\": \"CHAMONIX-MONT-BLANC\"\n    },\n    {\n      \"id\": \"1483\",\n      \"descrizione\": \"CHIETI\"\n    },\n    {\n      \"id\": \"1203\",\n      \"descrizione\": \"CIVITANOVA MARCHE\"\n    },\n    {\n      \"id\": \"1472\",\n      \"descrizione\": \"COLFIORITO\"\n    },\n    {\n      \"id\": \"1438\",\n      \"descrizione\": \"COLLE DI VAL D'ELSA\"\n    },\n    {\n      \"id\": \"1499\",\n      \"descrizione\": \"COMISO\"\n    },\n    {\n      \"id\": \"79\",\n      \"descrizione\": \"COSENZA\"\n    },\n    {\n      \"id\": \"1700\",\n      \"descrizione\": \"COURMAYER\"\n    },\n    {\n      \"id\": \"1728\",\n      \"descrizione\": \"CRIKVENICA\"\n    },\n    {\n      \"id\": \"1550\",\n      \"descrizione\": \"CUPRA MARITTIMA\"\n    },\n    {\n      \"id\": \"1024\",\n      \"descrizione\": \"CZAPLINEK\"\n    },\n    {\n      \"id\": \"34\",\n      \"descrizione\": \"CZESTOCHOWA\"\n    },\n    {\n      \"id\": \"1724\",\n      \"descrizione\": \"DAKOVO\"\n    },\n    {\n      \"id\": \"841\",\n      \"descrizione\": \"DEBICA\"\n    },\n    {\n      \"id\": \"795\",\n      \"descrizione\": \"DEN HAAG\"\n    },\n    {\n      \"id\": \"957\",\n      \"descrizione\": \"DIJON\"\n    },\n    {\n      \"id\": \"766\",\n      \"descrizione\": \"DOVER\"\n    },\n    {\n      \"id\": \"1445\",\n      \"descrizione\": \"EBOLI\"\n    },\n    {\n      \"id\": \"1464\",\n      \"descrizione\": \"EMPOLI\"\n    },\n    {\n      \"id\": \"1496\",\n      \"descrizione\": \"ENNA\"\n    },\n    {\n      \"id\": \"1206\",\n      \"descrizione\": \"FANO\"\n    },\n    {\n      \"id\": \"932\",\n      \"descrizione\": \"FERRARA\"\n    },\n    {\n      \"id\": \"84\",\n      \"descrizione\": \"FIGUERAS\"\n    },\n    {\n      \"id\": \"30\",\n      \"descrizione\": \"FIRENZE\"\n    },\n    {\n      \"id\": \"1041\",\n      \"descrizione\": \"FOGGIA\"\n    },\n    {\n      \"id\": \"1209\",\n      \"descrizione\": \"FORLI\"\n    },\n    {\n      \"id\": \"1261\",\n      \"descrizione\": \"FRANCAVILLA FONTANA\"\n    },\n    {\n      \"id\": \"901\",\n      \"descrizione\": \"FRANKFURT\"\n    },\n    {\n      \"id\": \"1031\",\n      \"descrizione\": \"FROSINONE\"\n    },\n    {\n      \"id\": \"1738\",\n      \"descrizione\": \"GALLIPOLI\"\n    },\n    {\n      \"id\": \"1282\",\n      \"descrizione\": \"GENEVE\"\n    },\n    {\n      \"id\": \"71\",\n      \"descrizione\": \"GENOVA\"\n    },\n    {\n      \"id\": \"1520\",\n      \"descrizione\": \"GIOIA DEL COLLE\"\n    },\n    {\n      \"id\": \"1599\",\n      \"descrizione\": \"GIOIA TAURO\"\n    },\n    {\n      \"id\": \"85\",\n      \"descrizione\": \"GIRONA\"\n    },\n    {\n      \"id\": \"1199\",\n      \"descrizione\": \"GIULIANOVA\"\n    },\n    {\n      \"id\": \"1625\",\n      \"descrizione\": \"GLIWICE\"\n    },\n    {\n      \"id\": \"1230\",\n      \"descrizione\": \"GNIEZNO\"\n    },\n    {\n      \"id\": \"842\",\n      \"descrizione\": \"GORLICE\"\n    },\n    {\n      \"id\": \"1732\",\n      \"descrizione\": \"GOSPIC\"\n    },\n    {\n      \"id\": \"26\",\n      \"descrizione\": \"GRAZ\"\n    },\n    {\n      \"id\": \"1188\",\n      \"descrizione\": \"GRENOBLE\"\n    },\n    {\n      \"id\": \"1458\",\n      \"descrizione\": \"GROSSETO\"\n    },\n    {\n      \"id\": \"1490\",\n      \"descrizione\": \"GROTTAMMARE\"\n    },\n    {\n      \"id\": \"1393\",\n      \"descrizione\": \"HAMBURG\"\n    },\n    {\n      \"id\": \"1725\",\n      \"descrizione\": \"HUMENNE\"\n    },\n    {\n      \"id\": \"1511\",\n      \"descrizione\": \"HYTHE\"\n    },\n    {\n      \"id\": \"1706\",\n      \"descrizione\": \"INGOLSTADT\"\n    },\n    {\n      \"id\": \"829\",\n      \"descrizione\": \"JAROSLAW\"\n    },\n    {\n      \"id\": \"852\",\n      \"descrizione\": \"JASLO\"\n    },\n    {\n      \"id\": \"52\",\n      \"descrizione\": \"JEDRZEJOW\"\n    },\n    {\n      \"id\": \"899\",\n      \"descrizione\": \"KARLSRUHE\"\n    },\n    {\n      \"id\": \"33\",\n      \"descrizione\": \"KATOWICE\"\n    },\n    {\n      \"id\": \"1263\",\n      \"descrizione\": \"KEPNO\"\n    },\n    {\n      \"id\": \"54\",\n      \"descrizione\": \"KIELCE\"\n    },\n    {\n      \"id\": \"25\",\n      \"descrizione\": \"KLAGENFURT\"\n    },\n    {\n      \"id\": \"798\",\n      \"descrizione\": \"KLODZKO\"\n    },\n    {\n      \"id\": \"804\",\n      \"descrizione\": \"KONIN\"\n    },\n    {\n      \"id\": \"763\",\n      \"descrizione\": \"KOSICE\"\n    },\n    {\n      \"id\": \"826\",\n      \"descrizione\": \"KRAKOW\"\n    },\n    {\n      \"id\": \"853\",\n      \"descrizione\": \"KROSNO\"\n    },\n    {\n      \"id\": \"1084\",\n      \"descrizione\": \"LAMEZIA TERME\"\n    },\n    {\n      \"id\": \"1518\",\n      \"descrizione\": \"LANCIANO\"\n    },\n    {\n      \"id\": \"924\",\n      \"descrizione\": \"L'AQUILA\"\n    },\n    {\n      \"id\": \"823\",\n      \"descrizione\": \"LA SPEZIA\"\n    },\n    {\n      \"id\": \"1629\",\n      \"descrizione\": \"LE CANNET\"\n    },\n    {\n      \"id\": \"1253\",\n      \"descrizione\": \"LECCE\"\n    },\n    {\n      \"id\": \"1556\",\n      \"descrizione\": \"LEIPZIG\"\n    },\n    {\n      \"id\": \"1500\",\n      \"descrizione\": \"LENTINI\"\n    },\n    {\n      \"id\": \"46\",\n      \"descrizione\": \"LESZNO\"\n    },\n    {\n      \"id\": \"836\",\n      \"descrizione\": \"LIDO DI JESOLO\"\n    },\n    {\n      \"id\": \"767\",\n      \"descrizione\": \"LIEGE\"\n    },\n    {\n      \"id\": \"838\",\n      \"descrizione\": \"LIGNANO\"\n    },\n    {\n      \"id\": \"1000\",\n      \"descrizione\": \"LILLE\"\n    },\n    {\n      \"id\": \"974\",\n      \"descrizione\": \"LIMANOWA\"\n    },\n    {\n      \"id\": \"1711\",\n      \"descrizione\": \"LINDAU\"\n    },\n    {\n      \"id\": \"821\",\n      \"descrizione\": \"LIVORNO\"\n    },\n    {\n      \"id\": \"1448\",\n      \"descrizione\": \"LJUBLJANA\"\n    },\n    {\n      \"id\": \"86\",\n      \"descrizione\": \"LLORET DE MAR\"\n    },\n    {\n      \"id\": \"35\",\n      \"descrizione\": \"LODZ\"\n    },\n    {\n      \"id\": \"774\",\n      \"descrizione\": \"LONDON\"\n    },\n    {\n      \"id\": \"1690\",\n      \"descrizione\": \"LOWICZ\"\n    },\n    {\n      \"id\": \"58\",\n      \"descrizione\": \"LUBLIN\"\n    },\n    {\n      \"id\": \"1691\",\n      \"descrizione\": \"LUBLINIEC\"\n    },\n    {\n      \"id\": \"949\",\n      \"descrizione\": \"LUCCA\"\n    },\n    {\n      \"id\": \"1193\",\n      \"descrizione\": \"LUGANO\"\n    },\n    {\n      \"id\": \"998\",\n      \"descrizione\": \"LUXEMBOURG\"\n    },\n    {\n      \"id\": \"1628\",\n      \"descrizione\": \"LUZERN\"\n    },\n    {\n      \"id\": \"765\",\n      \"descrizione\": \"LYON\"\n    },\n    {\n      \"id\": \"1488\",\n      \"descrizione\": \"MACERATA\"\n    },\n    {\n      \"id\": \"855\",\n      \"descrizione\": \"MADRID\"\n    },\n    {\n      \"id\": \"1602\",\n      \"descrizione\": \"MANGONE\"\n    },\n    {\n      \"id\": \"1334\",\n      \"descrizione\": \"MANNHEIM\"\n    },\n    {\n      \"id\": \"1569\",\n      \"descrizione\": \"MANTOVA\"\n    },\n    {\n      \"id\": \"875\",\n      \"descrizione\": \"MARSEILLE\"\n    },\n    {\n      \"id\": \"1202\",\n      \"descrizione\": \"MARTINSICURO\"\n    },\n    {\n      \"id\": \"1712\",\n      \"descrizione\": \"MEMMINGEN\"\n    },\n    {\n      \"id\": \"1504\",\n      \"descrizione\": \"MESSINA\"\n    },\n    {\n      \"id\": \"892\",\n      \"descrizione\": \"METZ\"\n    },\n    {\n      \"id\": \"1726\",\n      \"descrizione\": \"MICHALOVCE\"\n    },\n    {\n      \"id\": \"14\",\n      \"descrizione\": \"MILANO\"\n    },\n    {\n      \"id\": \"948\",\n      \"descrizione\": \"MODENA\"\n    },\n    {\n      \"id\": \"1497\",\n      \"descrizione\": \"MODICA\"\n    },\n    {\n      \"id\": \"1466\",\n      \"descrizione\": \"MONOPOLI\"\n    },\n    {\n      \"id\": \"895\",\n      \"descrizione\": \"MONTECATINI TERME\"\n    },\n    {\n      \"id\": \"1439\",\n      \"descrizione\": \"MONTERIGGIONI\"\n    },\n    {\n      \"id\": \"1482\",\n      \"descrizione\": \"MONTESILVANO\"\n    },\n    {\n      \"id\": \"866\",\n      \"descrizione\": \"MONTPELLIER\"\n    },\n    {\n      \"id\": \"1521\",\n      \"descrizione\": \"MOTTOLA\"\n    },\n    {\n      \"id\": \"1474\",\n      \"descrizione\": \"MUCCIA\"\n    },\n    {\n      \"id\": \"1190\",\n      \"descrizione\": \"MUNCHEN\"\n    },\n    {\n      \"id\": \"95\",\n      \"descrizione\": \"MURCIA\"\n    },\n    {\n      \"id\": \"1227\",\n      \"descrizione\": \"NAGYKANIZSA\"\n    },\n    {\n      \"id\": \"1357\",\n      \"descrizione\": \"NANCY\"\n    },\n    {\n      \"id\": \"1055\",\n      \"descrizione\": \"NANTES\"\n    },\n    {\n      \"id\": \"28\",\n      \"descrizione\": \"NAPOLI\"\n    },\n    {\n      \"id\": \"1278\",\n      \"descrizione\": \"NARBONNE\"\n    },\n    {\n      \"id\": \"864\",\n      \"descrizione\": \"NICE\"\n    },\n    {\n      \"id\": \"877\",\n      \"descrizione\": \"NIMES\"\n    },\n    {\n      \"id\": \"1166\",\n      \"descrizione\": \"NITRA\"\n    },\n    {\n      \"id\": \"1720\",\n      \"descrizione\": \"NOVA GRADISKA\"\n    },\n    {\n      \"id\": \"919\",\n      \"descrizione\": \"NOVARA\"\n    },\n    {\n      \"id\": \"1729\",\n      \"descrizione\": \"NOVI VINODOLSKI\"\n    },\n    {\n      \"id\": \"839\",\n      \"descrizione\": \"NOWY SACZ\"\n    },\n    {\n      \"id\": \"1349\",\n      \"descrizione\": \"NURNBERG\"\n    },\n    {\n      \"id\": \"961\",\n      \"descrizione\": \"ORTE\"\n    },\n    {\n      \"id\": \"1715\",\n      \"descrizione\": \"ORTHEZ\"\n    },\n    {\n      \"id\": \"1623\",\n      \"descrizione\": \"ORTONA\"\n    },\n    {\n      \"id\": \"1696\",\n      \"descrizione\": \"OSIJEK\"\n    },\n    {\n      \"id\": \"984\",\n      \"descrizione\": \"OSTROW MAZOWIECKA\"\n    },\n    {\n      \"id\": \"1731\",\n      \"descrizione\": \"OTOCAC\"\n    },\n    {\n      \"id\": \"32\",\n      \"descrizione\": \"PADOVA\"\n    },\n    {\n      \"id\": \"1492\",\n      \"descrizione\": \"PALERMO\"\n    },\n    {\n      \"id\": \"1598\",\n      \"descrizione\": \"PALMI\"\n    },\n    {\n      \"id\": \"777\",\n      \"descrizione\": \"PARIS\"\n    },\n    {\n      \"id\": \"820\",\n      \"descrizione\": \"PARMA\"\n    },\n    {\n      \"id\": \"1716\",\n      \"descrizione\": \"PAU\"\n    },\n    {\n      \"id\": \"1489\",\n      \"descrizione\": \"PEDASO\"\n    },\n    {\n      \"id\": \"867\",\n      \"descrizione\": \"PERPIGNAN\"\n    },\n    {\n      \"id\": \"894\",\n      \"descrizione\": \"PERUGIA\"\n    },\n    {\n      \"id\": \"926\",\n      \"descrizione\": \"PESARO\"\n    },\n    {\n      \"id\": \"1050\",\n      \"descrizione\": \"PESCARA\"\n    },\n    {\n      \"id\": \"824\",\n      \"descrizione\": \"PIACENZA\"\n    },\n    {\n      \"id\": \"1145\",\n      \"descrizione\": \"PIEST ANY\"\n    },\n    {\n      \"id\": \"61\",\n      \"descrizione\": \"PILA\"\n    },\n    {\n      \"id\": \"1402\",\n      \"descrizione\": \"PILSEN\"\n    },\n    {\n      \"id\": \"840\",\n      \"descrizione\": \"PILZNO\"\n    },\n    {\n      \"id\": \"1480\",\n      \"descrizione\": \"PINETO\"\n    },\n    {\n      \"id\": \"822\",\n      \"descrizione\": \"PISA\"\n    },\n    {\n      \"id\": \"1447\",\n      \"descrizione\": \"PISTOIA\"\n    },\n    {\n      \"id\": \"1437\",\n      \"descrizione\": \"POGGIBONSI\"\n    },\n    {\n      \"id\": \"1088\",\n      \"descrizione\": \"POLICORO\"\n    },\n    {\n      \"id\": \"1444\",\n      \"descrizione\": \"POLLA\"\n    },\n    {\n      \"id\": \"1216\",\n      \"descrizione\": \"POMPEI\"\n    },\n    {\n      \"id\": \"1508\",\n      \"descrizione\": \"POPOLI\"\n    },\n    {\n      \"id\": \"772\",\n      \"descrizione\": \"POPRAD\"\n    },\n    {\n      \"id\": \"1477\",\n      \"descrizione\": \"PORTO D'ASCOLI\"\n    },\n    {\n      \"id\": \"1572\",\n      \"descrizione\": \"PORTO RECANATI\"\n    },\n    {\n      \"id\": \"1205\",\n      \"descrizione\": \"PORTO SAN GIORGIO\"\n    },\n    {\n      \"id\": \"1309\",\n      \"descrizione\": \"POSTOJNA\"\n    },\n    {\n      \"id\": \"45\",\n      \"descrizione\": \"POZNAN\"\n    },\n    {\n      \"id\": \"754\",\n      \"descrizione\": \"PRAHA\"\n    },\n    {\n      \"id\": \"1446\",\n      \"descrizione\": \"PRATO\"\n    },\n    {\n      \"id\": \"1507\",\n      \"descrizione\": \"PRATOLA PELIGNA\"\n    },\n    {\n      \"id\": \"773\",\n      \"descrizione\": \"PRESOV\"\n    },\n    {\n      \"id\": \"830\",\n      \"descrizione\": \"PRZEMYSL\"\n    },\n    {\n      \"id\": \"960\",\n      \"descrizione\": \"PRZEWORSK\"\n    },\n    {\n      \"id\": \"1630\",\n      \"descrizione\": \"PUGET SUR ARGENS\"\n    },\n    {\n      \"id\": \"57\",\n      \"descrizione\": \"PULAWY\"\n    },\n    {\n      \"id\": \"56\",\n      \"descrizione\": \"RADOM\"\n    },\n    {\n      \"id\": \"1656\",\n      \"descrizione\": \"RADOMSKO\"\n    },\n    {\n      \"id\": \"1498\",\n      \"descrizione\": \"RAGUSA\"\n    },\n    {\n      \"id\": \"871\",\n      \"descrizione\": \"RAVENNA\"\n    },\n    {\n      \"id\": \"1626\",\n      \"descrizione\": \"REGENSBURG\"\n    },\n    {\n      \"id\": \"1596\",\n      \"descrizione\": \"REGGIO CALABRIA\"\n    },\n    {\n      \"id\": \"1030\",\n      \"descrizione\": \"REGGIO EMILIA\"\n    },\n    {\n      \"id\": \"1603\",\n      \"descrizione\": \"RENDE\"\n    },\n    {\n      \"id\": \"1067\",\n      \"descrizione\": \"RENNES\"\n    },\n    {\n      \"id\": \"870\",\n      \"descrizione\": \"RICCIONE\"\n    },\n    {\n      \"id\": \"1329\",\n      \"descrizione\": \"RIJEKA\"\n    },\n    {\n      \"id\": \"825\",\n      \"descrizione\": \"RIMINI\"\n    },\n    {\n      \"id\": \"29\",\n      \"descrizione\": \"ROMA\"\n    },\n    {\n      \"id\": \"1666\",\n      \"descrizione\": \"ROPCZYCE\"\n    },\n    {\n      \"id\": \"1600\",\n      \"descrizione\": \"ROSARNO\"\n    },\n    {\n      \"id\": \"1479\",\n      \"descrizione\": \"ROSETO DEGLI ABRUZZI\"\n    },\n    {\n      \"id\": \"794\",\n      \"descrizione\": \"ROTTERDAM\"\n    },\n    {\n      \"id\": \"1453\",\n      \"descrizione\": \"ROUEN\"\n    },\n    {\n      \"id\": \"1250\",\n      \"descrizione\": \"RYBNIK\"\n    },\n    {\n      \"id\": \"828\",\n      \"descrizione\": \"RZESZOW\"\n    },\n    {\n      \"id\": \"1627\",\n      \"descrizione\": \"SAINT GALLEN\"\n    },\n    {\n      \"id\": \"1718\",\n      \"descrizione\": \"SAINT GAUDENS\"\n    },\n    {\n      \"id\": \"1443\",\n      \"descrizione\": \"SALA CONSILINA\"\n    },\n    {\n      \"id\": \"1049\",\n      \"descrizione\": \"SALERNO\"\n    },\n    {\n      \"id\": \"90\",\n      \"descrizione\": \"SALOU MARITIMO\"\n    },\n    {\n      \"id\": \"1051\",\n      \"descrizione\": \"SAN BENEDETTO DEL TRONTO\"\n    },\n    {\n      \"id\": \"1196\",\n      \"descrizione\": \"SAN GABRIELE\"\n    },\n    {\n      \"id\": \"869\",\n      \"descrizione\": \"SANOK\"\n    },\n    {\n      \"id\": \"1101\",\n      \"descrizione\": \"SAN REMO\"\n    },\n    {\n      \"id\": \"1570\",\n      \"descrizione\": \"SARZANA\"\n    },\n    {\n      \"id\": \"82\",\n      \"descrizione\": \"SAVONA\"\n    },\n    {\n      \"id\": \"1730\",\n      \"descrizione\": \"SENJ\"\n    },\n    {\n      \"id\": \"1473\",\n      \"descrizione\": \"SERRAVALLE\"\n    },\n    {\n      \"id\": \"1087\",\n      \"descrizione\": \"SIBARI\"\n    },\n    {\n      \"id\": \"1331\",\n      \"descrizione\": \"SIBENIK\"\n    },\n    {\n      \"id\": \"1523\",\n      \"descrizione\": \"SICIGNANO\"\n    },\n    {\n      \"id\": \"893\",\n      \"descrizione\": \"SIENA\"\n    },\n    {\n      \"id\": \"1459\",\n      \"descrizione\": \"SIERADZ\"\n    },\n    {\n      \"id\": \"1481\",\n      \"descrizione\": \"SILVI MARINA\"\n    },\n    {\n      \"id\": \"1404\",\n      \"descrizione\": \"SIOFOK\"\n    },\n    {\n      \"id\": \"1501\",\n      \"descrizione\": \"SIRACUSA\"\n    },\n    {\n      \"id\": \"833\",\n      \"descrizione\": \"SKARZYSKO\"\n    },\n    {\n      \"id\": \"1695\",\n      \"descrizione\": \"SLAVONSKI BROD\"\n    },\n    {\n      \"id\": \"1469\",\n      \"descrizione\": \"S.MARIA DEGLI ANGELI\"\n    },\n    {\n      \"id\": \"1689\",\n      \"descrizione\": \"SOCHACZEW\"\n    },\n    {\n      \"id\": \"1564\",\n      \"descrizione\": \"SORA\"\n    },\n    {\n      \"id\": \"1085\",\n      \"descrizione\": \"SPEZZANO ALBANESE\"\n    },\n    {\n      \"id\": \"1332\",\n      \"descrizione\": \"SPLIT\"\n    },\n    {\n      \"id\": \"994\",\n      \"descrizione\": \"STARGARD SZCZECINSKI\"\n    },\n    {\n      \"id\": \"891\",\n      \"descrizione\": \"STRASBOURG\"\n    },\n    {\n      \"id\": \"898\",\n      \"descrizione\": \"STUTTGART\"\n    },\n    {\n      \"id\": \"1350\",\n      \"descrizione\": \"SULMONA\"\n    },\n    {\n      \"id\": \"65\",\n      \"descrizione\": \"SZCZECIN\"\n    },\n    {\n      \"id\": \"996\",\n      \"descrizione\": \"SZCZECINEK\"\n    },\n    {\n      \"id\": \"1048\",\n      \"descrizione\": \"TARANTO\"\n    },\n    {\n      \"id\": \"1717\",\n      \"descrizione\": \"TARBES\"\n    },\n    {\n      \"id\": \"827\",\n      \"descrizione\": \"TARNOW\"\n    },\n    {\n      \"id\": \"89\",\n      \"descrizione\": \"TARRAGONA\"\n    },\n    {\n      \"id\": \"925\",\n      \"descrizione\": \"TERAMO\"\n    },\n    {\n      \"id\": \"1255\",\n      \"descrizione\": \"TERMOLI\"\n    },\n    {\n      \"id\": \"81\",\n      \"descrizione\": \"TORINO\"\n    },\n    {\n      \"id\": \"807\",\n      \"descrizione\": \"TORUN\"\n    },\n    {\n      \"id\": \"874\",\n      \"descrizione\": \"TOULON\"\n    },\n    {\n      \"id\": \"878\",\n      \"descrizione\": \"TOULOUSE\"\n    },\n    {\n      \"id\": \"1069\",\n      \"descrizione\": \"TOURS\"\n    },\n    {\n      \"id\": \"769\",\n      \"descrizione\": \"TRENCIN\"\n    },\n    {\n      \"id\": \"16\",\n      \"descrizione\": \"TRENTO\"\n    },\n    {\n      \"id\": \"945\",\n      \"descrizione\": \"TRIESTE\"\n    },\n    {\n      \"id\": \"1144\",\n      \"descrizione\": \"TRNAVA\"\n    },\n    {\n      \"id\": \"1733\",\n      \"descrizione\": \"TROGIR\"\n    },\n    {\n      \"id\": \"958\",\n      \"descrizione\": \"UDINE\"\n    },\n    {\n      \"id\": \"997\",\n      \"descrizione\": \"ULM\"\n    },\n    {\n      \"id\": \"1505\",\n      \"descrizione\": \"URBINO\"\n    },\n    {\n      \"id\": \"936\",\n      \"descrizione\": \"UTRECHT\"\n    },\n    {\n      \"id\": \"92\",\n      \"descrizione\": \"VALENCIA\"\n    },\n    {\n      \"id\": \"1693\",\n      \"descrizione\": \"VALLE DEL SALTO\"\n    },\n    {\n      \"id\": \"1197\",\n      \"descrizione\": \"VAL VOMANO\"\n    },\n    {\n      \"id\": \"1519\",\n      \"descrizione\": \"VASTO\"\n    },\n    {\n      \"id\": \"80\",\n      \"descrizione\": \"VENEZIA\"\n    },\n    {\n      \"id\": \"24\",\n      \"descrizione\": \"VENEZIA\\/MESTRE\"\n    },\n    {\n      \"id\": \"83\",\n      \"descrizione\": \"VENTIMIGLIA\"\n    },\n    {\n      \"id\": \"17\",\n      \"descrizione\": \"VERONA\"\n    },\n    {\n      \"id\": \"811\",\n      \"descrizione\": \"VIAREGGIO\"\n    },\n    {\n      \"id\": \"1601\",\n      \"descrizione\": \"VIBO VALENTIA\"\n    },\n    {\n      \"id\": \"955\",\n      \"descrizione\": \"VICENZA\"\n    },\n    {\n      \"id\": \"1597\",\n      \"descrizione\": \"VILLA SAN GIOVANNI\"\n    },\n    {\n      \"id\": \"1722\",\n      \"descrizione\": \"VINKOVCI\"\n    },\n    {\n      \"id\": \"1723\",\n      \"descrizione\": \"VUKOVAR\"\n    },\n    {\n      \"id\": \"819\",\n      \"descrizione\": \"WARSZAWA\"\n    },\n    {\n      \"id\": \"917\",\n      \"descrizione\": \"WIEN\"\n    },\n    {\n      \"id\": \"1672\",\n      \"descrizione\": \"WODZISLAW SLASKI\"\n    },\n    {\n      \"id\": \"68\",\n      \"descrizione\": \"WROCLAW\"\n    },\n    {\n      \"id\": \"1330\",\n      \"descrizione\": \"ZADAR\"\n    },\n    {\n      \"id\": \"1333\",\n      \"descrizione\": \"ZAGREB\"\n    },\n    {\n      \"id\": \"41\",\n      \"descrizione\": \"ZAMBROW\"\n    },\n    {\n      \"id\": \"854\",\n      \"descrizione\": \"ZARAGOZA\"\n    },\n    {\n      \"id\": \"63\",\n      \"descrizione\": \"ZLOCIENIEC\"\n    },\n    {\n      \"id\": \"1721\",\n      \"descrizione\": \"ZUPANJA\"\n    },\n    {\n      \"id\": \"1563\",\n      \"descrizione\": \"ZURICH\"\n    },\n    {\n      \"id\": \"1167\",\n      \"descrizione\": \"ZVOLEN\"\n    }\n  ]\n}"
+				}
+			]
+		},
+		{
+			"name": "2. Metodo “app_citta_arrivo”",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200",
+							"var contentTypeHeaderExists = responseHeaders.hasOwnProperty(\"Content-Type\");",
+							" ",
+							"tests[\"Has Content-Type\"] = contentTypeHeaderExists;",
+							" ",
+							"if (contentTypeHeaderExists) {",
+							"    tests[\"Content-Type is application/json\"] = ",
+							"      responseHeaders[\"Content-Type\"].has(\"application/json\");",
+							"      ",
+							"}",
+							"",
+							"tests[\"Response has citta\"] = responseBody.has(\"citta\");",
+							"tests[\"Citta has id \"] = responseBody.has(\"id\")",
+							"tests[\"Citta has descrizione \"] = responseBody.has(\"descrizione\")",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://62.149.204.71/REST/data/corse/app_citta_arrivo/9038d809b9aa39aa1354c1dd1e520298/20-05-2017/1493",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "\n\f\n"
+			},
+			"response": [
+				{
+					"id": "29e48d5c-dd61-4c0d-b262-135adc287366",
+					"name": "app_citta_partenza_response_ok",
+					"originalRequest": {
+						"url": "https://62.149.204.71/REST/data/corse/app_citta_partenza/9038d809b9aa39aa1354c1dd1e520298/20-05-2017",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, must-revalidate",
+							"name": "Cache-Control",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip",
+							"name": "Content-Encoding",
+							"description": "The type of encoding used on the data."
+						},
+						{
+							"key": "Content-Length",
+							"value": "3171",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 17 Mar 2017 12:11:07 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Expires",
+							"value": "0",
+							"name": "Expires",
+							"description": "Gives the date/time after which the response is considered stale"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=2, max=100",
+							"name": "Keep-Alive",
+							"description": "Custom header"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.2.22 (Ubuntu)",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding",
+							"name": "Vary",
+							"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Luracast Restler v2.1.0",
+							"name": "X-Powered-By",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 1508,
+					"body": "{\n  \"citta\": [\n    {\n      \"id\": \"1493\",\n      \"descrizione\": \"AGRIGENTO\"\n    },\n    {\n      \"id\": \"876\",\n      \"descrizione\": \"AIX-EN-PROVENCE\"\n    },\n    {\n      \"id\": \"1201\",\n      \"descrizione\": \"ALBA ADRIATICA\"\n    },\n    {\n      \"id\": \"1355\",\n      \"descrizione\": \"ALCALA DE CHIVERT\"\n    },\n    {\n      \"id\": \"73\",\n      \"descrizione\": \"ALESSANDRIA\"\n    },\n    {\n      \"id\": \"94\",\n      \"descrizione\": \"ALICANTE\"\n    },\n    {\n      \"id\": \"796\",\n      \"descrizione\": \"AMSTERDAM\"\n    },\n    {\n      \"id\": \"835\",\n      \"descrizione\": \"ANCONA\"\n    },\n    {\n      \"id\": \"1154\",\n      \"descrizione\": \"ANGERS\"\n    },\n    {\n      \"id\": \"779\",\n      \"descrizione\": \"ANTWERPEN\"\n    },\n    {\n      \"id\": \"1280\",\n      \"descrizione\": \"AOSTA\"\n    },\n    {\n      \"id\": \"1566\",\n      \"descrizione\": \"AREZZO\"\n    },\n    {\n      \"id\": \"1476\",\n      \"descrizione\": \"ASCOLI PICENO\"\n    },\n    {\n      \"id\": \"1736\",\n      \"descrizione\": \"AUGUSTA\"\n    },\n    {\n      \"id\": \"1195\",\n      \"descrizione\": \"AVEZZANO\"\n    },\n    {\n      \"id\": \"865\",\n      \"descrizione\": \"AVIGNON\"\n    },\n    {\n      \"id\": \"1442\",\n      \"descrizione\": \"BARBERINO DI MUGELLO\"\n    },\n    {\n      \"id\": \"87\",\n      \"descrizione\": \"BARCELONA NORTE\"\n    },\n    {\n      \"id\": \"88\",\n      \"descrizione\": \"BARCELONA SANTS\"\n    },\n    {\n      \"id\": \"1039\",\n      \"descrizione\": \"BARI\"\n    },\n    {\n      \"id\": \"1254\",\n      \"descrizione\": \"BARLETTA\"\n    },\n    {\n      \"id\": \"1213\",\n      \"descrizione\": \"BATTIPAGLIA\"\n    },\n    {\n      \"id\": \"1194\",\n      \"descrizione\": \"BELLINZONA\"\n    },\n    {\n      \"id\": \"93\",\n      \"descrizione\": \"BENIDORM\"\n    },\n    {\n      \"id\": \"72\",\n      \"descrizione\": \"BERGAMO\"\n    },\n    {\n      \"id\": \"909\",\n      \"descrizione\": \"BERLIN\"\n    },\n    {\n      \"id\": \"1441\",\n      \"descrizione\": \"BETTOLLE\"\n    },\n    {\n      \"id\": \"1358\",\n      \"descrizione\": \"BEZIERS\"\n    },\n    {\n      \"id\": \"1042\",\n      \"descrizione\": \"BIALYSTOK\"\n    },\n    {\n      \"id\": \"837\",\n      \"descrizione\": \"BIBIONE\"\n    },\n    {\n      \"id\": \"873\",\n      \"descrizione\": \"BIELSKO BIALA\"\n    },\n    {\n      \"id\": \"1259\",\n      \"descrizione\": \"BOCHNIA\"\n    },\n    {\n      \"id\": \"31\",\n      \"descrizione\": \"BOLOGNA\"\n    },\n    {\n      \"id\": \"18\",\n      \"descrizione\": \"BOLZANO\"\n    },\n    {\n      \"id\": \"880\",\n      \"descrizione\": \"BORDEAUX\"\n    },\n    {\n      \"id\": \"768\",\n      \"descrizione\": \"BRATISLAVA\"\n    },\n    {\n      \"id\": \"793\",\n      \"descrizione\": \"BREDA\"\n    },\n    {\n      \"id\": \"1710\",\n      \"descrizione\": \"BREGENZ\"\n    },\n    {\n      \"id\": \"15\",\n      \"descrizione\": \"BRESCIA\"\n    },\n    {\n      \"id\": \"1037\",\n      \"descrizione\": \"BRINDISI\"\n    },\n    {\n      \"id\": \"776\",\n      \"descrizione\": \"BRUSSEL\"\n    },\n    {\n      \"id\": \"831\",\n      \"descrizione\": \"BRZESKO\"\n    },\n    {\n      \"id\": \"775\",\n      \"descrizione\": \"BUDAPEST\"\n    },\n    {\n      \"id\": \"69\",\n      \"descrizione\": \"BYDGOSZCZ\"\n    },\n    {\n      \"id\": \"1475\",\n      \"descrizione\": \"CACCAMO\"\n    },\n    {\n      \"id\": \"1452\",\n      \"descrizione\": \"CAEN\"\n    },\n    {\n      \"id\": \"1634\",\n      \"descrizione\": \"CAIANELLO\"\n    },\n    {\n      \"id\": \"1495\",\n      \"descrizione\": \"CALTANISSETTA\"\n    },\n    {\n      \"id\": \"1494\",\n      \"descrizione\": \"CANICATTI\"\n    },\n    {\n      \"id\": \"1632\",\n      \"descrizione\": \"CANNES\"\n    },\n    {\n      \"id\": \"1279\",\n      \"descrizione\": \"CAORLE\"\n    },\n    {\n      \"id\": \"1719\",\n      \"descrizione\": \"CARCASSONNE\"\n    },\n    {\n      \"id\": \"1471\",\n      \"descrizione\": \"CASENOVE\"\n    },\n    {\n      \"id\": \"1214\",\n      \"descrizione\": \"CASERTA\"\n    },\n    {\n      \"id\": \"1228\",\n      \"descrizione\": \"CASSINO\"\n    },\n    {\n      \"id\": \"1737\",\n      \"descrizione\": \"CASTELLANETA\"\n    },\n    {\n      \"id\": \"91\",\n      \"descrizione\": \"CASTELLON\"\n    },\n    {\n      \"id\": \"1502\",\n      \"descrizione\": \"CATANIA\"\n    },\n    {\n      \"id\": \"959\",\n      \"descrizione\": \"CATTOLICA\"\n    },\n    {\n      \"id\": \"1040\",\n      \"descrizione\": \"CERIGNOLA\"\n    },\n    {\n      \"id\": \"1208\",\n      \"descrizione\": \"CESENA\"\n    },\n    {\n      \"id\": \"1286\",\n      \"descrizione\": \"CHAMONIX-MONT-BLANC\"\n    },\n    {\n      \"id\": \"1483\",\n      \"descrizione\": \"CHIETI\"\n    },\n    {\n      \"id\": \"1203\",\n      \"descrizione\": \"CIVITANOVA MARCHE\"\n    },\n    {\n      \"id\": \"1472\",\n      \"descrizione\": \"COLFIORITO\"\n    },\n    {\n      \"id\": \"1438\",\n      \"descrizione\": \"COLLE DI VAL D'ELSA\"\n    },\n    {\n      \"id\": \"1499\",\n      \"descrizione\": \"COMISO\"\n    },\n    {\n      \"id\": \"79\",\n      \"descrizione\": \"COSENZA\"\n    },\n    {\n      \"id\": \"1700\",\n      \"descrizione\": \"COURMAYER\"\n    },\n    {\n      \"id\": \"1728\",\n      \"descrizione\": \"CRIKVENICA\"\n    },\n    {\n      \"id\": \"1550\",\n      \"descrizione\": \"CUPRA MARITTIMA\"\n    },\n    {\n      \"id\": \"1024\",\n      \"descrizione\": \"CZAPLINEK\"\n    },\n    {\n      \"id\": \"34\",\n      \"descrizione\": \"CZESTOCHOWA\"\n    },\n    {\n      \"id\": \"1724\",\n      \"descrizione\": \"DAKOVO\"\n    },\n    {\n      \"id\": \"841\",\n      \"descrizione\": \"DEBICA\"\n    },\n    {\n      \"id\": \"795\",\n      \"descrizione\": \"DEN HAAG\"\n    },\n    {\n      \"id\": \"957\",\n      \"descrizione\": \"DIJON\"\n    },\n    {\n      \"id\": \"766\",\n      \"descrizione\": \"DOVER\"\n    },\n    {\n      \"id\": \"1445\",\n      \"descrizione\": \"EBOLI\"\n    },\n    {\n      \"id\": \"1464\",\n      \"descrizione\": \"EMPOLI\"\n    },\n    {\n      \"id\": \"1496\",\n      \"descrizione\": \"ENNA\"\n    },\n    {\n      \"id\": \"1206\",\n      \"descrizione\": \"FANO\"\n    },\n    {\n      \"id\": \"932\",\n      \"descrizione\": \"FERRARA\"\n    },\n    {\n      \"id\": \"84\",\n      \"descrizione\": \"FIGUERAS\"\n    },\n    {\n      \"id\": \"30\",\n      \"descrizione\": \"FIRENZE\"\n    },\n    {\n      \"id\": \"1041\",\n      \"descrizione\": \"FOGGIA\"\n    },\n    {\n      \"id\": \"1209\",\n      \"descrizione\": \"FORLI\"\n    },\n    {\n      \"id\": \"1261\",\n      \"descrizione\": \"FRANCAVILLA FONTANA\"\n    },\n    {\n      \"id\": \"901\",\n      \"descrizione\": \"FRANKFURT\"\n    },\n    {\n      \"id\": \"1031\",\n      \"descrizione\": \"FROSINONE\"\n    },\n    {\n      \"id\": \"1738\",\n      \"descrizione\": \"GALLIPOLI\"\n    },\n    {\n      \"id\": \"1282\",\n      \"descrizione\": \"GENEVE\"\n    },\n    {\n      \"id\": \"71\",\n      \"descrizione\": \"GENOVA\"\n    },\n    {\n      \"id\": \"1520\",\n      \"descrizione\": \"GIOIA DEL COLLE\"\n    },\n    {\n      \"id\": \"1599\",\n      \"descrizione\": \"GIOIA TAURO\"\n    },\n    {\n      \"id\": \"85\",\n      \"descrizione\": \"GIRONA\"\n    },\n    {\n      \"id\": \"1199\",\n      \"descrizione\": \"GIULIANOVA\"\n    },\n    {\n      \"id\": \"1625\",\n      \"descrizione\": \"GLIWICE\"\n    },\n    {\n      \"id\": \"1230\",\n      \"descrizione\": \"GNIEZNO\"\n    },\n    {\n      \"id\": \"842\",\n      \"descrizione\": \"GORLICE\"\n    },\n    {\n      \"id\": \"1732\",\n      \"descrizione\": \"GOSPIC\"\n    },\n    {\n      \"id\": \"26\",\n      \"descrizione\": \"GRAZ\"\n    },\n    {\n      \"id\": \"1188\",\n      \"descrizione\": \"GRENOBLE\"\n    },\n    {\n      \"id\": \"1458\",\n      \"descrizione\": \"GROSSETO\"\n    },\n    {\n      \"id\": \"1490\",\n      \"descrizione\": \"GROTTAMMARE\"\n    },\n    {\n      \"id\": \"1393\",\n      \"descrizione\": \"HAMBURG\"\n    },\n    {\n      \"id\": \"1725\",\n      \"descrizione\": \"HUMENNE\"\n    },\n    {\n      \"id\": \"1511\",\n      \"descrizione\": \"HYTHE\"\n    },\n    {\n      \"id\": \"1706\",\n      \"descrizione\": \"INGOLSTADT\"\n    },\n    {\n      \"id\": \"829\",\n      \"descrizione\": \"JAROSLAW\"\n    },\n    {\n      \"id\": \"852\",\n      \"descrizione\": \"JASLO\"\n    },\n    {\n      \"id\": \"52\",\n      \"descrizione\": \"JEDRZEJOW\"\n    },\n    {\n      \"id\": \"899\",\n      \"descrizione\": \"KARLSRUHE\"\n    },\n    {\n      \"id\": \"33\",\n      \"descrizione\": \"KATOWICE\"\n    },\n    {\n      \"id\": \"1263\",\n      \"descrizione\": \"KEPNO\"\n    },\n    {\n      \"id\": \"54\",\n      \"descrizione\": \"KIELCE\"\n    },\n    {\n      \"id\": \"25\",\n      \"descrizione\": \"KLAGENFURT\"\n    },\n    {\n      \"id\": \"798\",\n      \"descrizione\": \"KLODZKO\"\n    },\n    {\n      \"id\": \"804\",\n      \"descrizione\": \"KONIN\"\n    },\n    {\n      \"id\": \"763\",\n      \"descrizione\": \"KOSICE\"\n    },\n    {\n      \"id\": \"826\",\n      \"descrizione\": \"KRAKOW\"\n    },\n    {\n      \"id\": \"853\",\n      \"descrizione\": \"KROSNO\"\n    },\n    {\n      \"id\": \"1084\",\n      \"descrizione\": \"LAMEZIA TERME\"\n    },\n    {\n      \"id\": \"1518\",\n      \"descrizione\": \"LANCIANO\"\n    },\n    {\n      \"id\": \"924\",\n      \"descrizione\": \"L'AQUILA\"\n    },\n    {\n      \"id\": \"823\",\n      \"descrizione\": \"LA SPEZIA\"\n    },\n    {\n      \"id\": \"1629\",\n      \"descrizione\": \"LE CANNET\"\n    },\n    {\n      \"id\": \"1253\",\n      \"descrizione\": \"LECCE\"\n    },\n    {\n      \"id\": \"1556\",\n      \"descrizione\": \"LEIPZIG\"\n    },\n    {\n      \"id\": \"1500\",\n      \"descrizione\": \"LENTINI\"\n    },\n    {\n      \"id\": \"46\",\n      \"descrizione\": \"LESZNO\"\n    },\n    {\n      \"id\": \"836\",\n      \"descrizione\": \"LIDO DI JESOLO\"\n    },\n    {\n      \"id\": \"767\",\n      \"descrizione\": \"LIEGE\"\n    },\n    {\n      \"id\": \"838\",\n      \"descrizione\": \"LIGNANO\"\n    },\n    {\n      \"id\": \"1000\",\n      \"descrizione\": \"LILLE\"\n    },\n    {\n      \"id\": \"974\",\n      \"descrizione\": \"LIMANOWA\"\n    },\n    {\n      \"id\": \"1711\",\n      \"descrizione\": \"LINDAU\"\n    },\n    {\n      \"id\": \"821\",\n      \"descrizione\": \"LIVORNO\"\n    },\n    {\n      \"id\": \"1448\",\n      \"descrizione\": \"LJUBLJANA\"\n    },\n    {\n      \"id\": \"86\",\n      \"descrizione\": \"LLORET DE MAR\"\n    },\n    {\n      \"id\": \"35\",\n      \"descrizione\": \"LODZ\"\n    },\n    {\n      \"id\": \"774\",\n      \"descrizione\": \"LONDON\"\n    },\n    {\n      \"id\": \"1690\",\n      \"descrizione\": \"LOWICZ\"\n    },\n    {\n      \"id\": \"58\",\n      \"descrizione\": \"LUBLIN\"\n    },\n    {\n      \"id\": \"1691\",\n      \"descrizione\": \"LUBLINIEC\"\n    },\n    {\n      \"id\": \"949\",\n      \"descrizione\": \"LUCCA\"\n    },\n    {\n      \"id\": \"1193\",\n      \"descrizione\": \"LUGANO\"\n    },\n    {\n      \"id\": \"998\",\n      \"descrizione\": \"LUXEMBOURG\"\n    },\n    {\n      \"id\": \"1628\",\n      \"descrizione\": \"LUZERN\"\n    },\n    {\n      \"id\": \"765\",\n      \"descrizione\": \"LYON\"\n    },\n    {\n      \"id\": \"1488\",\n      \"descrizione\": \"MACERATA\"\n    },\n    {\n      \"id\": \"855\",\n      \"descrizione\": \"MADRID\"\n    },\n    {\n      \"id\": \"1602\",\n      \"descrizione\": \"MANGONE\"\n    },\n    {\n      \"id\": \"1334\",\n      \"descrizione\": \"MANNHEIM\"\n    },\n    {\n      \"id\": \"1569\",\n      \"descrizione\": \"MANTOVA\"\n    },\n    {\n      \"id\": \"875\",\n      \"descrizione\": \"MARSEILLE\"\n    },\n    {\n      \"id\": \"1202\",\n      \"descrizione\": \"MARTINSICURO\"\n    },\n    {\n      \"id\": \"1712\",\n      \"descrizione\": \"MEMMINGEN\"\n    },\n    {\n      \"id\": \"1504\",\n      \"descrizione\": \"MESSINA\"\n    },\n    {\n      \"id\": \"892\",\n      \"descrizione\": \"METZ\"\n    },\n    {\n      \"id\": \"1726\",\n      \"descrizione\": \"MICHALOVCE\"\n    },\n    {\n      \"id\": \"14\",\n      \"descrizione\": \"MILANO\"\n    },\n    {\n      \"id\": \"948\",\n      \"descrizione\": \"MODENA\"\n    },\n    {\n      \"id\": \"1497\",\n      \"descrizione\": \"MODICA\"\n    },\n    {\n      \"id\": \"1466\",\n      \"descrizione\": \"MONOPOLI\"\n    },\n    {\n      \"id\": \"895\",\n      \"descrizione\": \"MONTECATINI TERME\"\n    },\n    {\n      \"id\": \"1439\",\n      \"descrizione\": \"MONTERIGGIONI\"\n    },\n    {\n      \"id\": \"1482\",\n      \"descrizione\": \"MONTESILVANO\"\n    },\n    {\n      \"id\": \"866\",\n      \"descrizione\": \"MONTPELLIER\"\n    },\n    {\n      \"id\": \"1521\",\n      \"descrizione\": \"MOTTOLA\"\n    },\n    {\n      \"id\": \"1474\",\n      \"descrizione\": \"MUCCIA\"\n    },\n    {\n      \"id\": \"1190\",\n      \"descrizione\": \"MUNCHEN\"\n    },\n    {\n      \"id\": \"95\",\n      \"descrizione\": \"MURCIA\"\n    },\n    {\n      \"id\": \"1227\",\n      \"descrizione\": \"NAGYKANIZSA\"\n    },\n    {\n      \"id\": \"1357\",\n      \"descrizione\": \"NANCY\"\n    },\n    {\n      \"id\": \"1055\",\n      \"descrizione\": \"NANTES\"\n    },\n    {\n      \"id\": \"28\",\n      \"descrizione\": \"NAPOLI\"\n    },\n    {\n      \"id\": \"1278\",\n      \"descrizione\": \"NARBONNE\"\n    },\n    {\n      \"id\": \"864\",\n      \"descrizione\": \"NICE\"\n    },\n    {\n      \"id\": \"877\",\n      \"descrizione\": \"NIMES\"\n    },\n    {\n      \"id\": \"1166\",\n      \"descrizione\": \"NITRA\"\n    },\n    {\n      \"id\": \"1720\",\n      \"descrizione\": \"NOVA GRADISKA\"\n    },\n    {\n      \"id\": \"919\",\n      \"descrizione\": \"NOVARA\"\n    },\n    {\n      \"id\": \"1729\",\n      \"descrizione\": \"NOVI VINODOLSKI\"\n    },\n    {\n      \"id\": \"839\",\n      \"descrizione\": \"NOWY SACZ\"\n    },\n    {\n      \"id\": \"1349\",\n      \"descrizione\": \"NURNBERG\"\n    },\n    {\n      \"id\": \"961\",\n      \"descrizione\": \"ORTE\"\n    },\n    {\n      \"id\": \"1715\",\n      \"descrizione\": \"ORTHEZ\"\n    },\n    {\n      \"id\": \"1623\",\n      \"descrizione\": \"ORTONA\"\n    },\n    {\n      \"id\": \"1696\",\n      \"descrizione\": \"OSIJEK\"\n    },\n    {\n      \"id\": \"984\",\n      \"descrizione\": \"OSTROW MAZOWIECKA\"\n    },\n    {\n      \"id\": \"1731\",\n      \"descrizione\": \"OTOCAC\"\n    },\n    {\n      \"id\": \"32\",\n      \"descrizione\": \"PADOVA\"\n    },\n    {\n      \"id\": \"1492\",\n      \"descrizione\": \"PALERMO\"\n    },\n    {\n      \"id\": \"1598\",\n      \"descrizione\": \"PALMI\"\n    },\n    {\n      \"id\": \"777\",\n      \"descrizione\": \"PARIS\"\n    },\n    {\n      \"id\": \"820\",\n      \"descrizione\": \"PARMA\"\n    },\n    {\n      \"id\": \"1716\",\n      \"descrizione\": \"PAU\"\n    },\n    {\n      \"id\": \"1489\",\n      \"descrizione\": \"PEDASO\"\n    },\n    {\n      \"id\": \"867\",\n      \"descrizione\": \"PERPIGNAN\"\n    },\n    {\n      \"id\": \"894\",\n      \"descrizione\": \"PERUGIA\"\n    },\n    {\n      \"id\": \"926\",\n      \"descrizione\": \"PESARO\"\n    },\n    {\n      \"id\": \"1050\",\n      \"descrizione\": \"PESCARA\"\n    },\n    {\n      \"id\": \"824\",\n      \"descrizione\": \"PIACENZA\"\n    },\n    {\n      \"id\": \"1145\",\n      \"descrizione\": \"PIEST ANY\"\n    },\n    {\n      \"id\": \"61\",\n      \"descrizione\": \"PILA\"\n    },\n    {\n      \"id\": \"1402\",\n      \"descrizione\": \"PILSEN\"\n    },\n    {\n      \"id\": \"840\",\n      \"descrizione\": \"PILZNO\"\n    },\n    {\n      \"id\": \"1480\",\n      \"descrizione\": \"PINETO\"\n    },\n    {\n      \"id\": \"822\",\n      \"descrizione\": \"PISA\"\n    },\n    {\n      \"id\": \"1447\",\n      \"descrizione\": \"PISTOIA\"\n    },\n    {\n      \"id\": \"1437\",\n      \"descrizione\": \"POGGIBONSI\"\n    },\n    {\n      \"id\": \"1088\",\n      \"descrizione\": \"POLICORO\"\n    },\n    {\n      \"id\": \"1444\",\n      \"descrizione\": \"POLLA\"\n    },\n    {\n      \"id\": \"1216\",\n      \"descrizione\": \"POMPEI\"\n    },\n    {\n      \"id\": \"1508\",\n      \"descrizione\": \"POPOLI\"\n    },\n    {\n      \"id\": \"772\",\n      \"descrizione\": \"POPRAD\"\n    },\n    {\n      \"id\": \"1477\",\n      \"descrizione\": \"PORTO D'ASCOLI\"\n    },\n    {\n      \"id\": \"1572\",\n      \"descrizione\": \"PORTO RECANATI\"\n    },\n    {\n      \"id\": \"1205\",\n      \"descrizione\": \"PORTO SAN GIORGIO\"\n    },\n    {\n      \"id\": \"1309\",\n      \"descrizione\": \"POSTOJNA\"\n    },\n    {\n      \"id\": \"45\",\n      \"descrizione\": \"POZNAN\"\n    },\n    {\n      \"id\": \"754\",\n      \"descrizione\": \"PRAHA\"\n    },\n    {\n      \"id\": \"1446\",\n      \"descrizione\": \"PRATO\"\n    },\n    {\n      \"id\": \"1507\",\n      \"descrizione\": \"PRATOLA PELIGNA\"\n    },\n    {\n      \"id\": \"773\",\n      \"descrizione\": \"PRESOV\"\n    },\n    {\n      \"id\": \"830\",\n      \"descrizione\": \"PRZEMYSL\"\n    },\n    {\n      \"id\": \"960\",\n      \"descrizione\": \"PRZEWORSK\"\n    },\n    {\n      \"id\": \"1630\",\n      \"descrizione\": \"PUGET SUR ARGENS\"\n    },\n    {\n      \"id\": \"57\",\n      \"descrizione\": \"PULAWY\"\n    },\n    {\n      \"id\": \"56\",\n      \"descrizione\": \"RADOM\"\n    },\n    {\n      \"id\": \"1656\",\n      \"descrizione\": \"RADOMSKO\"\n    },\n    {\n      \"id\": \"1498\",\n      \"descrizione\": \"RAGUSA\"\n    },\n    {\n      \"id\": \"871\",\n      \"descrizione\": \"RAVENNA\"\n    },\n    {\n      \"id\": \"1626\",\n      \"descrizione\": \"REGENSBURG\"\n    },\n    {\n      \"id\": \"1596\",\n      \"descrizione\": \"REGGIO CALABRIA\"\n    },\n    {\n      \"id\": \"1030\",\n      \"descrizione\": \"REGGIO EMILIA\"\n    },\n    {\n      \"id\": \"1603\",\n      \"descrizione\": \"RENDE\"\n    },\n    {\n      \"id\": \"1067\",\n      \"descrizione\": \"RENNES\"\n    },\n    {\n      \"id\": \"870\",\n      \"descrizione\": \"RICCIONE\"\n    },\n    {\n      \"id\": \"1329\",\n      \"descrizione\": \"RIJEKA\"\n    },\n    {\n      \"id\": \"825\",\n      \"descrizione\": \"RIMINI\"\n    },\n    {\n      \"id\": \"29\",\n      \"descrizione\": \"ROMA\"\n    },\n    {\n      \"id\": \"1666\",\n      \"descrizione\": \"ROPCZYCE\"\n    },\n    {\n      \"id\": \"1600\",\n      \"descrizione\": \"ROSARNO\"\n    },\n    {\n      \"id\": \"1479\",\n      \"descrizione\": \"ROSETO DEGLI ABRUZZI\"\n    },\n    {\n      \"id\": \"794\",\n      \"descrizione\": \"ROTTERDAM\"\n    },\n    {\n      \"id\": \"1453\",\n      \"descrizione\": \"ROUEN\"\n    },\n    {\n      \"id\": \"1250\",\n      \"descrizione\": \"RYBNIK\"\n    },\n    {\n      \"id\": \"828\",\n      \"descrizione\": \"RZESZOW\"\n    },\n    {\n      \"id\": \"1627\",\n      \"descrizione\": \"SAINT GALLEN\"\n    },\n    {\n      \"id\": \"1718\",\n      \"descrizione\": \"SAINT GAUDENS\"\n    },\n    {\n      \"id\": \"1443\",\n      \"descrizione\": \"SALA CONSILINA\"\n    },\n    {\n      \"id\": \"1049\",\n      \"descrizione\": \"SALERNO\"\n    },\n    {\n      \"id\": \"90\",\n      \"descrizione\": \"SALOU MARITIMO\"\n    },\n    {\n      \"id\": \"1051\",\n      \"descrizione\": \"SAN BENEDETTO DEL TRONTO\"\n    },\n    {\n      \"id\": \"1196\",\n      \"descrizione\": \"SAN GABRIELE\"\n    },\n    {\n      \"id\": \"869\",\n      \"descrizione\": \"SANOK\"\n    },\n    {\n      \"id\": \"1101\",\n      \"descrizione\": \"SAN REMO\"\n    },\n    {\n      \"id\": \"1570\",\n      \"descrizione\": \"SARZANA\"\n    },\n    {\n      \"id\": \"82\",\n      \"descrizione\": \"SAVONA\"\n    },\n    {\n      \"id\": \"1730\",\n      \"descrizione\": \"SENJ\"\n    },\n    {\n      \"id\": \"1473\",\n      \"descrizione\": \"SERRAVALLE\"\n    },\n    {\n      \"id\": \"1087\",\n      \"descrizione\": \"SIBARI\"\n    },\n    {\n      \"id\": \"1331\",\n      \"descrizione\": \"SIBENIK\"\n    },\n    {\n      \"id\": \"1523\",\n      \"descrizione\": \"SICIGNANO\"\n    },\n    {\n      \"id\": \"893\",\n      \"descrizione\": \"SIENA\"\n    },\n    {\n      \"id\": \"1459\",\n      \"descrizione\": \"SIERADZ\"\n    },\n    {\n      \"id\": \"1481\",\n      \"descrizione\": \"SILVI MARINA\"\n    },\n    {\n      \"id\": \"1404\",\n      \"descrizione\": \"SIOFOK\"\n    },\n    {\n      \"id\": \"1501\",\n      \"descrizione\": \"SIRACUSA\"\n    },\n    {\n      \"id\": \"833\",\n      \"descrizione\": \"SKARZYSKO\"\n    },\n    {\n      \"id\": \"1695\",\n      \"descrizione\": \"SLAVONSKI BROD\"\n    },\n    {\n      \"id\": \"1469\",\n      \"descrizione\": \"S.MARIA DEGLI ANGELI\"\n    },\n    {\n      \"id\": \"1689\",\n      \"descrizione\": \"SOCHACZEW\"\n    },\n    {\n      \"id\": \"1564\",\n      \"descrizione\": \"SORA\"\n    },\n    {\n      \"id\": \"1085\",\n      \"descrizione\": \"SPEZZANO ALBANESE\"\n    },\n    {\n      \"id\": \"1332\",\n      \"descrizione\": \"SPLIT\"\n    },\n    {\n      \"id\": \"994\",\n      \"descrizione\": \"STARGARD SZCZECINSKI\"\n    },\n    {\n      \"id\": \"891\",\n      \"descrizione\": \"STRASBOURG\"\n    },\n    {\n      \"id\": \"898\",\n      \"descrizione\": \"STUTTGART\"\n    },\n    {\n      \"id\": \"1350\",\n      \"descrizione\": \"SULMONA\"\n    },\n    {\n      \"id\": \"65\",\n      \"descrizione\": \"SZCZECIN\"\n    },\n    {\n      \"id\": \"996\",\n      \"descrizione\": \"SZCZECINEK\"\n    },\n    {\n      \"id\": \"1048\",\n      \"descrizione\": \"TARANTO\"\n    },\n    {\n      \"id\": \"1717\",\n      \"descrizione\": \"TARBES\"\n    },\n    {\n      \"id\": \"827\",\n      \"descrizione\": \"TARNOW\"\n    },\n    {\n      \"id\": \"89\",\n      \"descrizione\": \"TARRAGONA\"\n    },\n    {\n      \"id\": \"925\",\n      \"descrizione\": \"TERAMO\"\n    },\n    {\n      \"id\": \"1255\",\n      \"descrizione\": \"TERMOLI\"\n    },\n    {\n      \"id\": \"81\",\n      \"descrizione\": \"TORINO\"\n    },\n    {\n      \"id\": \"807\",\n      \"descrizione\": \"TORUN\"\n    },\n    {\n      \"id\": \"874\",\n      \"descrizione\": \"TOULON\"\n    },\n    {\n      \"id\": \"878\",\n      \"descrizione\": \"TOULOUSE\"\n    },\n    {\n      \"id\": \"1069\",\n      \"descrizione\": \"TOURS\"\n    },\n    {\n      \"id\": \"769\",\n      \"descrizione\": \"TRENCIN\"\n    },\n    {\n      \"id\": \"16\",\n      \"descrizione\": \"TRENTO\"\n    },\n    {\n      \"id\": \"945\",\n      \"descrizione\": \"TRIESTE\"\n    },\n    {\n      \"id\": \"1144\",\n      \"descrizione\": \"TRNAVA\"\n    },\n    {\n      \"id\": \"1733\",\n      \"descrizione\": \"TROGIR\"\n    },\n    {\n      \"id\": \"958\",\n      \"descrizione\": \"UDINE\"\n    },\n    {\n      \"id\": \"997\",\n      \"descrizione\": \"ULM\"\n    },\n    {\n      \"id\": \"1505\",\n      \"descrizione\": \"URBINO\"\n    },\n    {\n      \"id\": \"936\",\n      \"descrizione\": \"UTRECHT\"\n    },\n    {\n      \"id\": \"92\",\n      \"descrizione\": \"VALENCIA\"\n    },\n    {\n      \"id\": \"1693\",\n      \"descrizione\": \"VALLE DEL SALTO\"\n    },\n    {\n      \"id\": \"1197\",\n      \"descrizione\": \"VAL VOMANO\"\n    },\n    {\n      \"id\": \"1519\",\n      \"descrizione\": \"VASTO\"\n    },\n    {\n      \"id\": \"80\",\n      \"descrizione\": \"VENEZIA\"\n    },\n    {\n      \"id\": \"24\",\n      \"descrizione\": \"VENEZIA\\/MESTRE\"\n    },\n    {\n      \"id\": \"83\",\n      \"descrizione\": \"VENTIMIGLIA\"\n    },\n    {\n      \"id\": \"17\",\n      \"descrizione\": \"VERONA\"\n    },\n    {\n      \"id\": \"811\",\n      \"descrizione\": \"VIAREGGIO\"\n    },\n    {\n      \"id\": \"1601\",\n      \"descrizione\": \"VIBO VALENTIA\"\n    },\n    {\n      \"id\": \"955\",\n      \"descrizione\": \"VICENZA\"\n    },\n    {\n      \"id\": \"1597\",\n      \"descrizione\": \"VILLA SAN GIOVANNI\"\n    },\n    {\n      \"id\": \"1722\",\n      \"descrizione\": \"VINKOVCI\"\n    },\n    {\n      \"id\": \"1723\",\n      \"descrizione\": \"VUKOVAR\"\n    },\n    {\n      \"id\": \"819\",\n      \"descrizione\": \"WARSZAWA\"\n    },\n    {\n      \"id\": \"917\",\n      \"descrizione\": \"WIEN\"\n    },\n    {\n      \"id\": \"1672\",\n      \"descrizione\": \"WODZISLAW SLASKI\"\n    },\n    {\n      \"id\": \"68\",\n      \"descrizione\": \"WROCLAW\"\n    },\n    {\n      \"id\": \"1330\",\n      \"descrizione\": \"ZADAR\"\n    },\n    {\n      \"id\": \"1333\",\n      \"descrizione\": \"ZAGREB\"\n    },\n    {\n      \"id\": \"41\",\n      \"descrizione\": \"ZAMBROW\"\n    },\n    {\n      \"id\": \"854\",\n      \"descrizione\": \"ZARAGOZA\"\n    },\n    {\n      \"id\": \"63\",\n      \"descrizione\": \"ZLOCIENIEC\"\n    },\n    {\n      \"id\": \"1721\",\n      \"descrizione\": \"ZUPANJA\"\n    },\n    {\n      \"id\": \"1563\",\n      \"descrizione\": \"ZURICH\"\n    },\n    {\n      \"id\": \"1167\",\n      \"descrizione\": \"ZVOLEN\"\n    }\n  ]\n}"
+				},
+				{
+					"id": "fad5f001-4f73-4d43-b595-437b068900e2",
+					"name": "app_citta_arrivo_response_ok",
+					"originalRequest": {
+						"url": "https://62.149.204.71/REST/data/corse/app_citta_arrivo/9038d809b9aa39aa1354c1dd1e520298/20-05-2017/1493",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, must-revalidate",
+							"name": "Cache-Control",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip",
+							"name": "Content-Encoding",
+							"description": "The type of encoding used on the data."
+						},
+						{
+							"key": "Content-Length",
+							"value": "291",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 17 Mar 2017 12:15:01 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Expires",
+							"value": "0",
+							"name": "Expires",
+							"description": "Gives the date/time after which the response is considered stale"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=2, max=100",
+							"name": "Keep-Alive",
+							"description": "Custom header"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.2.22 (Ubuntu)",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding",
+							"name": "Vary",
+							"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Luracast Restler v2.1.0",
+							"name": "X-Powered-By",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 625,
+					"body": "{\n  \"citta\": [\n    {\n      \"id\": \"835\",\n      \"descrizione\": \"ANCONA\"\n    },\n    {\n      \"id\": \"1195\",\n      \"descrizione\": \"AVEZZANO\"\n    },\n    {\n      \"id\": \"31\",\n      \"descrizione\": \"BOLOGNA\"\n    },\n    {\n      \"id\": \"1203\",\n      \"descrizione\": \"CIVITANOVA MARCHE\"\n    },\n    {\n      \"id\": \"1464\",\n      \"descrizione\": \"EMPOLI\"\n    },\n    {\n      \"id\": \"30\",\n      \"descrizione\": \"FIRENZE\"\n    },\n    {\n      \"id\": \"71\",\n      \"descrizione\": \"GENOVA\"\n    },\n    {\n      \"id\": \"1199\",\n      \"descrizione\": \"GIULIANOVA\"\n    },\n    {\n      \"id\": \"823\",\n      \"descrizione\": \"LA SPEZIA\"\n    },\n    {\n      \"id\": \"32\",\n      \"descrizione\": \"PADOVA\"\n    },\n    {\n      \"id\": \"894\",\n      \"descrizione\": \"PERUGIA\"\n    },\n    {\n      \"id\": \"926\",\n      \"descrizione\": \"PESARO\"\n    },\n    {\n      \"id\": \"1050\",\n      \"descrizione\": \"PESCARA\"\n    },\n    {\n      \"id\": \"822\",\n      \"descrizione\": \"PISA\"\n    },\n    {\n      \"id\": \"1477\",\n      \"descrizione\": \"PORTO D'ASCOLI\"\n    },\n    {\n      \"id\": \"893\",\n      \"descrizione\": \"SIENA\"\n    },\n    {\n      \"id\": \"1505\",\n      \"descrizione\": \"URBINO\"\n    },\n    {\n      \"id\": \"80\",\n      \"descrizione\": \"VENEZIA\"\n    },\n    {\n      \"id\": \"24\",\n      \"descrizione\": \"VENEZIA\\/MESTRE\"\n    }\n  ]\n}"
+				}
+			]
+		},
+		{
+			"name": "3. Metodo “app_ricerca”",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200",
+							"var contentTypeHeaderExists = responseHeaders.hasOwnProperty(\"Content-Type\");",
+							" ",
+							"tests[\"Has Content-Type\"] = contentTypeHeaderExists;",
+							" ",
+							"if (contentTypeHeaderExists) {",
+							"    tests[\"Content-Type is application/json\"] = ",
+							"      responseHeaders[\"Content-Type\"].has(\"application/json\");",
+							"      ",
+							"}",
+							"",
+							"var response = responseBody",
+							"",
+							"tests[\"Response has soluzioni\"] = responseBody.has(\"soluzioni\");",
+							"tests[\"Response has idsoluzione\"] = responseBody.has(\"idsoluzione\");",
+							"tests[\"Response has descrizione\"] = responseBody.has(\"descrizione\");",
+							"tests[\"Response has idfermatapartenza\"] = responseBody.has(\"idfermatapartenza\");",
+							"tests[\"Response has dexfermatapartenza\"] = responseBody.has(\"dexfermatapartenza\");",
+							"tests[\"Response has dexfermataarrivo\"] = responseBody.has(\"dexfermataarrivo\");",
+							"tests[\"Response has orapartenza\"] = responseBody.has(\"orapartenza\");",
+							"tests[\"Response has orarrivo\"] = responseBody.has(\"orarrivo\");",
+							"tests[\"Response has sceltafermate\"] = responseBody.has(\"sceltafermate\");",
+							"tests[\"Response has cambio\"] = responseBody.has(\"cambio\");",
+							"tests[\"Response has nazionale\"] = responseBody.has(\"nazionale\");",
+							"tests[\"Response has disponibilita\"] = responseBody.has(\"disponibilita\");",
+							"tests[\"Response has dataPartenza\"] = responseBody.has(\"dataPartenza\");",
+							"tests[\"Response has bestPrice\"] = responseBody.has(\"bestPrice\");",
+							"tests[\"Response has dirittiPrenotazione\"] = responseBody.has(\"dirittiPrenotazione\");",
+							"tests[\"Response has numeroCambi\"] = responseBody.has(\"numeroCambi\");",
+							"",
+							"",
+							"var jsonData = JSON.parse(responseBody);",
+							"console.log(\"jsondata\", jsonData)"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://62.149.204.71/REST/data/corse/app_ricerca/9038d809b9aa39aa1354c1dd1e520298/20-05-2017/1493/835",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "\n\f\n"
+			},
+			"response": [
+				{
+					"id": "4050a34d-6d72-4868-9771-95a79f253a8f",
+					"name": "app_ricera_response.json",
+					"originalRequest": {
+						"url": "https://62.149.204.71/REST/data/corse/app_ricerca/9038d809b9aa39aa1354c1dd1e520298/20-05-2017/1493/835",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, must-revalidate",
+							"name": "Cache-Control",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip",
+							"name": "Content-Encoding",
+							"description": "The type of encoding used on the data."
+						},
+						{
+							"key": "Content-Length",
+							"value": "362",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 17 Mar 2017 12:24:26 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Expires",
+							"value": "0",
+							"name": "Expires",
+							"description": "Gives the date/time after which the response is considered stale"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=2, max=100",
+							"name": "Keep-Alive",
+							"description": "Custom header"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache",
+							"name": "Pragma",
+							"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.2.22 (Ubuntu)",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding",
+							"name": "Vary",
+							"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Luracast Restler v2.1.0",
+							"name": "X-Powered-By",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 1046,
+					"body": "{\n  \"soluzioni\": [\n    {\n      \"idsoluzione\": \"281469;980841\",\n      \"descrizione\": \"AGRIGENTO - ANCONA\",\n      \"idfermatapartenza\": \"1156\",\n      \"idfermataarrivo\": \"758\",\n      \"dexfermatapartenza\": \"Piazzale Rosselli - cambio tecnico a Catania\",\n      \"dexfermataarrivo\": \"STAZIONE FS P.ZZALE ROSSELLI\",\n      \"orapartenza\": \"14:15\",\n      \"orarrivo\": \"08:05\",\n      \"sceltafermate\": \"N\",\n      \"cambio\": 0,\n      \"nazionale\": \"S\",\n      \"disponibilita\": \"15\",\n      \"dataPartenza\": \"20\\/05\\/2017\",\n      \"bestPrice\": 76,\n      \"dirittiPrenotazione\": 0,\n      \"numeroCambi\": 0\n    },\n    {\n      \"idsoluzione\": \"281469;980842\",\n      \"descrizione\": \"AGRIGENTO - ANCONA\",\n      \"idfermatapartenza\": \"1156\",\n      \"idfermataarrivo\": \"758\",\n      \"dexfermatapartenza\": \"Piazzale Rosselli - cambio tecnico a Catania\",\n      \"dexfermataarrivo\": \"STAZIONE FS P.ZZALE ROSSELLI\",\n      \"orapartenza\": \"14:15\",\n      \"orarrivo\": \"08:05\",\n      \"sceltafermate\": \"N\",\n      \"cambio\": 0,\n      \"nazionale\": \"S\",\n      \"disponibilita\": \"15\",\n      \"dataPartenza\": \"21\\/05\\/2017\",\n      \"bestPrice\": 76,\n      \"dirittiPrenotazione\": 0,\n      \"numeroCambi\": 0\n    },\n    {\n      \"idsoluzione\": \"281469;980843\",\n      \"descrizione\": \"AGRIGENTO - ANCONA\",\n      \"idfermatapartenza\": \"1156\",\n      \"idfermataarrivo\": \"758\",\n      \"dexfermatapartenza\": \"Piazzale Rosselli - cambio tecnico a Catania\",\n      \"dexfermataarrivo\": \"STAZIONE FS P.ZZALE ROSSELLI\",\n      \"orapartenza\": \"14:15\",\n      \"orarrivo\": \"08:05\",\n      \"sceltafermate\": \"N\",\n      \"cambio\": 0,\n      \"nazionale\": \"S\",\n      \"disponibilita\": \"15\",\n      \"dataPartenza\": \"22\\/05\\/2017\",\n      \"bestPrice\": 76,\n      \"dirittiPrenotazione\": 0,\n      \"numeroCambi\": 0\n    }\n  ],\n  \"message\": [\n    \n  ]\n}"
+				}
+			]
+		},
+		{
+			"name": "4. Metodo “app_fermate”",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200",
+							"var contentTypeHeaderExists = responseHeaders.hasOwnProperty(\"Content-Type\");",
+							" ",
+							"tests[\"Has Content-Type\"] = contentTypeHeaderExists;",
+							" ",
+							"if (contentTypeHeaderExists) {",
+							"    tests[\"Content-Type is application/json\"] = ",
+							"      responseHeaders[\"Content-Type\"].has(\"application/json\");",
+							"      ",
+							"}",
+							"",
+							"tests[\"Response has soluzioni\"] = responseBody.has(\"soluzioni\");",
+							"tests[\"Response has idsoluzione\"] = responseBody.has(\"idsoluzione\");",
+							"tests[\"Response has descrizione\"] = responseBody.has(\"descrizione\");",
+							"tests[\"Response has fermatepartenza\"] = responseBody.has(\"fermatepartenza\");",
+							"tests[\"Response has idfermata\"] = responseBody.has(\"idfermata\");",
+							"tests[\"Response has idfermata\"] = responseBody.has(\"idfermata\");",
+							"tests[\"Response has fermatearrivo\"] = responseBody.has(\"fermatearrivo\");"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://62.149.204.71/REST/data/corse/app_fermate/9038d809b9aa39aa1354c1dd1e520298/281469;980841/20-05-2017/1493/835",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "\n\f\n"
+			},
+			"response": [
+				{
+					"id": "216ae53e-aaf5-44b4-b140-8ca38b6d75f1",
+					"name": "app_fermate_response.json",
+					"originalRequest": {
+						"url": "https://62.149.204.71/REST/data/corse/app_fermate/9038d809b9aa39aa1354c1dd1e520298/281469;980841/20-05-2017/1493/835",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, must-revalidate",
+							"name": "Cache-Control",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip",
+							"name": "Content-Encoding",
+							"description": "The type of encoding used on the data."
+						},
+						{
+							"key": "Content-Length",
+							"value": "240",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 17 Mar 2017 12:25:17 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Expires",
+							"value": "0",
+							"name": "Expires",
+							"description": "Gives the date/time after which the response is considered stale"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=2, max=100",
+							"name": "Keep-Alive",
+							"description": "Custom header"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache",
+							"name": "Pragma",
+							"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.2.22 (Ubuntu)",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding",
+							"name": "Vary",
+							"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Luracast Restler v2.1.0",
+							"name": "X-Powered-By",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 918,
+					"body": "{\n  \"soluzioni\": [\n    {\n      \"idsoluzione\": \"281469;980841\",\n      \"descrizione\": \"AGRIGENTO - ANCONA\",\n      \"fermatepartenza\": [\n        {\n          \"idfermata\": \"1156\",\n          \"indirizzo\": \"AGRIGENTO - Piazzale Rosselli - cambio tecnico a Catania\"\n        }\n      ],\n      \"fermatearrivo\": [\n        {\n          \"idfermata\": \"758\",\n          \"indirizzo\": \"ANCONA - STAZIONE FS P.ZZALE ROSSELLI\"\n        }\n      ]\n    }\n  ]\n}"
+				}
+			]
+		},
+		{
+			"name": "5. Metodo “app_tariffe”",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200",
+							"var contentTypeHeaderExists = responseHeaders.hasOwnProperty(\"Content-Type\");",
+							" ",
+							"tests[\"Has Content-Type\"] = contentTypeHeaderExists;",
+							" ",
+							"if (contentTypeHeaderExists) {",
+							"    tests[\"Content-Type is application/json\"] = ",
+							"      responseHeaders[\"Content-Type\"].has(\"application/json\");",
+							"      ",
+							"}",
+							"",
+							"var response = responseBody",
+							"",
+							"tests[\"Response has tariffe\"] = responseBody.has(\"tariffe\");",
+							"tests[\"Response has id\"] = responseBody.has(\"id\");",
+							"tests[\"Response has descrizione\"] = responseBody.has(\"descrizione\");",
+							"tests[\"Response has prezzo\"] = responseBody.has(\"prezzo\");",
+							"tests[\"Response has dirittiPrenotazione\"] = responseBody.has(\"dirittiPrenotazione\");",
+							"tests[\"Response has cards\"] = responseBody.has(\"cards\");"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://62.149.204.71/REST/data/prenotazioni/app_tariffe/9038d809b9aa39aa1354c1dd1e520298/281469;980841/1156/758",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "\n\f\n"
+			},
+			"response": []
+		},
+		{
+			"name": "6. Metodo “app_ acquisto”",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200",
+							"var contentTypeHeaderExists = responseHeaders.hasOwnProperty(\"Content-Type\");",
+							" ",
+							"tests[\"Has Content-Type\"] = contentTypeHeaderExists;",
+							" ",
+							"if (contentTypeHeaderExists) {",
+							"    tests[\"Content-Type is application/json\"] = ",
+							"      responseHeaders[\"Content-Type\"].has(\"application/json\");",
+							"      ",
+							"}",
+							"",
+							"tests[\"Response has prenotazione\"] = responseBody.has(\"prenotazione\");",
+							"tests[\"Response has idprenotazione\"] = responseBody.has(\"idprenotazione\");",
+							"tests[\"Response has prezzo\"] = responseBody.has(\"prezzo\");",
+							"tests[\"Response has datascadenza\"] = responseBody.has(\"datascadenza\");",
+							"tests[\"Response has codicetransazione\"] = responseBody.has(\"codicetransazione\");"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://62.149.204.71/REST/data/prenotazioni/app_acquisto/9038d809b9aa39aa1354c1dd1e520298/281469;980841",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"prenotazione\" :\n\t{ \n\t   \"id_fermata_partenza\": 1156,\n\t  \t\"id_fermata_arrivo\": 758,\n\t    \"idcliente\": -1,\n\t    \"tipo_pagamento\": \"SI\",\n\t    \"cod_transazione\": \"1233\",\n\t    \"pax\":  {\n\t       \"nome\": \"Carlo\",\n\t       \"cognome\": \"Verdi\",\n\t       \"data_nascita\": \"17-05-2017\",\n\t       \"tipo_documento\": \"PASS\",\n\t       \"numero_documento\": \"3123\",\n\t       \"nazionalita\": \"S\",\n\t       \"telefono\": 23335659723,\n\t       \"numero_card\": 0, \n\t       \"tipo_card\": 0,\n\t       \"idtariffa\": 2\n\t    }\n\t\n\t}\n}"
+				},
+				"description": "\n\f\n"
+			},
+			"response": []
+		},
+		{
+			"name": "7. Metodo “app_conferma”",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200",
+							"var contentTypeHeaderExists = responseHeaders.hasOwnProperty(\"Content-Type\");",
+							" ",
+							"tests[\"Has Content-Type\"] = contentTypeHeaderExists;",
+							" ",
+							"if (contentTypeHeaderExists) {",
+							"    tests[\"Content-Type is application/json\"] = ",
+							"      responseHeaders[\"Content-Type\"].has(\"application/json\");",
+							"      ",
+							"}",
+							"",
+							"tests[\"Response has prenotazione\"] = responseBody.has(\"prenotazione\");",
+							"tests[\"Response has idprenotazione\"] = responseBody.has(\"idprenotazione\");",
+							"tests[\"Response has viaggio\"] = responseBody.has(\"viaggio\");",
+							"tests[\"Response has data_partenza\"] = responseBody.has(\"data_partenza\");",
+							"tests[\"Response has link_ticket\"] = responseBody.has(\"link_ticket\");"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://62.149.204.71/REST/data/prenotazioni/app_conferma/9038d809b9aa39aa1354c1dd1e520298/BALTOUR.IT.0043343",
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": "\n\f\n"
+			},
+			"response": []
+		},
+		{
+			"name": "8. Metodo “app_annullamento”",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200",
+							"var contentTypeHeaderExists = responseHeaders.hasOwnProperty(\"Content-Type\");",
+							" ",
+							"tests[\"Has Content-Type\"] = contentTypeHeaderExists;",
+							" ",
+							"if (contentTypeHeaderExists) {",
+							"    tests[\"Content-Type is application/json\"] = ",
+							"      responseHeaders[\"Content-Type\"].has(\"application/json\");",
+							"      ",
+							"}",
+							"",
+							"tests[\"Response has messaggio\"] = responseBody.has(\"messaggio\");"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://62.149.204.71/REST/data/prenotazioni/app_annullamento/9038d809b9aa39aa1354c1dd1e520298/12345678",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": "\n\f\n"
+			},
+			"response": []
+		},
+		{
+			"name": "9. Metodo “app_ infobiglietto”",
+			"request": {
+				"url": "https://62.149.204.71/REST/data/prenotazioni/app_infobiglietto/9038d809b9aa39aa1354c1dd1e520298/BA0123456",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"prenotazione\" :\n\t{ \n\t   \"id_fermata_partenza\":1156,\n\t  \t\"id_fermata_arrivo\": 758,\n\t    \"idcliente\": 2,\n\t    \"tipoPagamento\": \"CC\",\n\t    \"cod_transazione\": \"XXXXXXX\",\n\t    \"pax\":  {\n\t       \"nome\": \"Carlo\",\n\t       \"cognome\": \"Verdi\",\n\t       \"data_nascita\": \"20-05-2017\",\n\t       \"tipo_documento\":\"CI\",\n\t       \"numero_documento\": \"3123\",\n\t       \"nazionalita\": \"IT\",\n\t       \"telefono\": 233356597,\n\t       \"numero_card\": 0, \n\t       \"tipo_card\": 0,\n\t       \"idtariffa\": 2\n\t    }\n\t\n\t}\n}"
+				},
+				"description": "\n\f\n"
+			},
+			"response": []
+		},
+		{
+			"name": "10. Metodo “app_nazionalita”",
+			"request": {
+				"url": "https://62.149.204.71/REST/data/prenotazioni/app_mazionalita/9038d809b9aa39aa1354c1dd1e520298",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"prenotazione\" :\n\t{ \n\t   \"id_fermata_partenza\":1156,\n\t  \t\"id_fermata_arrivo\": 758,\n\t    \"idcliente\": 2,\n\t    \"tipoPagamento\": \"CC\",\n\t    \"cod_transazione\": \"XXXXXXX\",\n\t    \"pax\":  {\n\t       \"nome\": \"Carlo\",\n\t       \"cognome\": \"Verdi\",\n\t       \"data_nascita\": \"20-05-2017\",\n\t       \"tipo_documento\":\"CI\",\n\t       \"numero_documento\": \"3123\",\n\t       \"nazionalita\": \"IT\",\n\t       \"telefono\": 233356597,\n\t       \"numero_card\": 0, \n\t       \"tipo_card\": 0,\n\t       \"idtariffa\": 2\n\t    }\n\t\n\t}\n}"
+				},
+				"description": "\n\f\n"
+			},
+			"response": []
+		},
+		{
+			"name": "11. Metodo “app_elencotariffe”",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200",
+							"var contentTypeHeaderExists = responseHeaders.hasOwnProperty(\"Content-Type\");",
+							" ",
+							"tests[\"Has Content-Type\"] = contentTypeHeaderExists;",
+							" ",
+							"if (contentTypeHeaderExists) {",
+							"    tests[\"Content-Type is application/json\"] = ",
+							"      responseHeaders[\"Content-Type\"].has(\"application/json\");",
+							"      ",
+							"}",
+							"",
+							"var response = responseBody",
+							"",
+							"tests[\"Response has tariffe\"] = responseBody.has(\"tariffe\");",
+							"tests[\"Response has id\"] = responseBody.has(\"id\");",
+							"tests[\"Response has descrizione\"] = responseBody.has(\"descrizione\");"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://62.149.204.71/REST/data/prenotazioni/app_elencotariffe/9038d809b9aa39aa1354c1dd1e520298/20-05-2017",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"prenotazione\" :\n\t{ \n\t   \"id_fermata_partenza\":1156,\n\t  \t\"id_fermata_arrivo\": 758,\n\t    \"idcliente\": 2,\n\t    \"tipoPagamento\": \"CC\",\n\t    \"cod_transazione\": \"XXXXXXX\",\n\t    \"pax\":  {\n\t       \"nome\": \"Carlo\",\n\t       \"cognome\": \"Verdi\",\n\t       \"data_nascita\": \"20-05-2017\",\n\t       \"tipo_documento\":\"CI\",\n\t       \"numero_documento\": \"3123\",\n\t       \"nazionalita\": \"IT\",\n\t       \"telefono\": 233356597,\n\t       \"numero_card\": 0, \n\t       \"tipo_card\": 0,\n\t       \"idtariffa\": 2\n\t    }\n\t\n\t}\n}"
+				},
+				"description": "\n\f\n"
+			},
+			"response": []
+		}
+	]
+}
