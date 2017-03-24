@@ -1,0 +1,49 @@
+{
+	"variables": [],
+	"info": {
+		"name": "XML",
+		"_postman_id": "bbc0d4eb-b12c-88a8-e129-7178304eb003",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://www.w3schools.com/xml/note.xml",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200",
+							"var contentTypeHeaderExists = responseHeaders.hasOwnProperty(\"Content-Type\");",
+							" ",
+							"tests[\"Has Content-Type\"] = contentTypeHeaderExists;",
+							" ",
+							"if (contentTypeHeaderExists) {",
+							"    tests[\"Content-Type is text/xml\"] = ",
+							"      responseHeaders[\"Content-Type\"].has(\"text/xml\");",
+							"      ",
+							"}",
+							"",
+							"tests[\"Response has to\"] = responseBody.has(\"to\");",
+							"tests[\"Response has from\"] = responseBody.has(\"from\");",
+							"tests[\"Response has heading\"] = responseBody.has(\"heading\");",
+							"tests[\"Response has body\"] = responseBody.has(\"body\");",
+							"tests[\"Response has note\"] = responseBody.has(\"note\");",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://www.w3schools.com/xml/note.xml",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
